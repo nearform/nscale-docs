@@ -9,12 +9,12 @@ __nscale__ is an open source project to configure, build and deploy a set of con
 
 ### Setup Guides
 
-- [OS X]()
-- [Linux]()
+- [OS X](./setup-guides/osx-setup-guide.md)
+- [Linux](./setup-guides/linux-setup-guide.md)
 
 ### General
 
-- [Quick Start]()
+- [Quick Start](./general/quick-start.md)
 - [Vagrant Setup]()
 - [Troubleshooting]()
 
