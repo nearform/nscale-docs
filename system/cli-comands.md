@@ -1,9 +1,6 @@
 
 ![nscale](../_imgs/logo.png)
 
-> This template can be used to set up links to a page that is open to the community
-> to complete. Please remove this message after copying this template.
-
 [Back To - Documentation](../README.md)
 
 # System - CLI Commands
