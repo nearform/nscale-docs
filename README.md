@@ -15,19 +15,12 @@ __nscale__ is an open source project to configure, build and deploy a set of con
 ### General
 
 - [Quick Start](./general/quick-start.md)
-- [Vagrant Setup]()
-- [Troubleshooting]()
+- [Vagrant Setup](./general/vagrant-setup.md)
+- [Troubleshooting](./general/troubleshooting.md)
 
 ### System
 
-- [CLI Commands]()
-
-### Platform Specific
-
-- [Local]()
-- [AWS]()
-- [Azure]()
-- [Digital Ocean]()
+- [CLI Commands](./system/cli-comands.md)
 
 ### Workshops
 
