@@ -146,8 +146,8 @@ This should show the help output.
 
 ## Next Steps
 
-* [Quick Start](../general/quick-start.md)
-
+* [To - Quick Start](../general/quick-start.md)
+* [Back To - Documentation](../README.md)
 
 
 [Linux Development Quick Start Guide]: Linux-Development-Quick-Start-Guide
