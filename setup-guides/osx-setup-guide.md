@@ -116,7 +116,7 @@ This should show the help output.
 
 ## Next Steps
 
-* [To - Quick Start Guide](../general/quick-start-guide.md)
+* [To - Quick Start Guide](../general/quick-start.md)
 * [Back To - Documentation](../README.md)
 
 
