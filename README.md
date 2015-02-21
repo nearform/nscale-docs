@@ -16,7 +16,7 @@ This repository contains documentation and guides relating to the setup and usag
 
 - [OS X](./setup-guides/osx-setup-guide.md)
 - [Linux](./setup-guides/linux-setup-guide.md)
-- [Vagrant](./general/vagrant-setup.md)
+- [Vagrant](./setup-guides/vagrant-setup-guide.md)
 - [AWS](./setup-guides/aws-setup-guide.md)
 
 ## Quick Start
