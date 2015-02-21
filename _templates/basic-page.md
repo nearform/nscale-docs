@@ -1,15 +1,15 @@
 
 ![nscale](../_imgs/logo.png)
 
-> This template can be used to as a starting point for a page or guide. Please
-> remove this message after copying this template.
+[Back To - Home](../README.md)
 
-[Back To - Documentation](../README.md)
-
-# Section - Title
-   
+# Your Section - Your Title
+  
 Page Summary...
 
-## Next Steps
+## Sub Heading
 
-* [Back To - Documentation](../README.md)
+Your content here...
+
+<br/>
+[Back To - Home](../README.md)

@@ -1,10 +1,19 @@
-# Requirements
+
+![nscale](../_imgs/logo.png)
+
+[Back To - Home](../README.md)
+
+# Setup Guides - AWS
+
+This setup guide will walk you through installing nscale and it's prerequisites on an AWS AMI.
+
+## Requirements
 
 * An [Amazon AWS account][AWS-signup]
 
-# Instantiating nscale-base AMI
+## Instantiating an _nscale-base_ AMI
 
-We can use the <a href="https://console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-a405ded3" target="_blank"> nscale-base </a> 
+We can use the <a href="https://console.aws.amazon.com/ec2/v2/home?region=eu-west-1#LaunchInstanceWizard:ami=ami-a405ded3" target="_blank"> nscale-base </a>
 AMI "bookmark" to get started. This public AMI is configured according to the
 [Linux Setup Guide][] (except for git credentials, see below).
 
@@ -13,9 +22,9 @@ then click "Review and Launch". If we're happy with the details we can then pres
 "Launch". We'll be asked to manage key pairs (we can create one if we don't have one),
 after which we can click the "Launch Instances" button.
 
-# Logging on to the instance
+## Logging on to the instance
 
-After a short wait our instance will have initialized, we grab it's public IP from 
+After a short wait our instance will have initialized, we grab it's public IP from
 the console and then login to our instance via SSH
 
 ```
@@ -33,11 +42,11 @@ sudo npm i -g n
 sudo n latest
 ```
 
-# Github
+## Github
 
 `nscale` uses both and git and Github extensively, in order for commands
 like `nsd system clone` to work. We need to have the git user name and
-email set to our Github login and have `ssh-keys` set up with Github. 
+email set to our Github login and have `ssh-keys` set up with Github.
 
 To set our Github use and email we do:
 
@@ -62,10 +71,8 @@ ssh -T -o "VerifyHostKeyDNS yes" git@github.com
 
 If we're correctly set up, Github will respond that we're succesfully authenticated.
 
-# Next Steps
-
-* [AWS Deployment Quick Start Guide][]
-
+<br/>
+[Back To - Home](../README.md)
 
 [Linux Development Quick Start Guide]: Linux-Development-Quick-Start-Guide
 [OS X Development Quick Start Guide]: OS-X-Development-Quick-Start-Guide
