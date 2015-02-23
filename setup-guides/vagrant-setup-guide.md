@@ -1,7 +1,7 @@
 
 ![nscale](../_imgs/logo.png)
 
-[Back To - Documentation](../README.md)
+[Back To - Home](../README.md)
 
 # General - Vagrant Setup
 
@@ -98,6 +98,4 @@ nsd revision deploy nscaledemo <revision_id>
 curl http://127.0.0.1:8000
 ```
 
-## Next Steps
-
-* [Back To - Documentation](../README.md)
+[Back To - Home](../README.md)

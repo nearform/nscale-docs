@@ -1,17 +1,17 @@
 
 ![nscale](../_imgs/logo.png)
 
-[Back To - Documentation](../README.md)
+[Back To - Home](../README.md)
 
-# General - Quick Start
+# Quick Start - General
 
 This guide is designed to get you up and running with nscale
 on Linux or OSX as quickly as possible.
 
 ## Requirements
-If you don't have all of the below requirements you can use
-the [Linux Setup Guide]() or the [OS X Setup Guide]() to prepare
-your system for use.
+If you don't have all of the below requirements you can use the [Linux Setup Guide](../setup-guides/linux-setup-guide.md) or the
+[OS X Setup Guide](../setup-guides/osx-setup-guide.md) to
+prepare your system for use.
 
 * Node
 * Git
@@ -150,9 +150,8 @@ open http://localhost:8000
 
 We should see "Hello World!".
 
-## Next Steps
-
-* [Back To - Documentation](../README.md)
+<br/>
+[Back To - Home](../README.md)
 
 [Linux Setup Guide]: Linux-Setup-Guide
 [Getting Started From Scratch]: Getting-Started-From-Scratch

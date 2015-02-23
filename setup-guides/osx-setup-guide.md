@@ -1,7 +1,7 @@
 
 ![nscale](../_imgs/logo.png)
 
-[Back To - Documentation](../README.md)
+[Back To - Home](../README.md)
 
 # Setup Guides - OSX
 
@@ -114,10 +114,8 @@ nsd
 
 This should show the help output.
 
-## Next Steps
-
-* [To - Quick Start Guide](../general/quick-start.md)
-* [Back To - Documentation](../README.md)
+<br/>
+[Back To - Home](../README.md)
 
 
 
