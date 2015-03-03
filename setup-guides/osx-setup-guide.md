@@ -55,7 +55,7 @@ Alternatively we can use the OS X [package installer][git-install]
 ## Github
 
 nscale uses both and git and Github extensively, in order for commands
-like `nscale system clone` to work. We need to have the git user name and
+like `nsd system clone` to work. We need to have the git user name and
 email set to our Github login and have `ssh-keys` set up with Github.
 
 To set our Github use and email we do:
@@ -88,10 +88,7 @@ Docker provides containers, that can be thought of as isolated environments
 that provide the benefits of running virtual machines but at much
 lower resource cost (see [What is Docker][] for more).
 
-If we don't have docker installed, plugin the USB provided and follow the [Boot2docker OSX Installation guide](https://github.com/nearform/nscale-workshop/blob/master/boot2docker-osx.md).
-
-Alternatively follow the
-[installation guide for OS X][docker-install] but this setup will take much longer.
+If you don't have docker installed, follow the [installation guide for OS X][docker-install].
 
 ## nscale
 
@@ -103,8 +100,7 @@ To install nscale we simply run
 sudo npm i -g nscale
 ```
 
-This will provide an executable named `nscale`
-which is the main tool for managing distrubuted systems deployment.
+This will provide an executable named `nscale`, which is the main tool for managing distrubuted systems deployment.
 
 We can test that the install was successful by attempting to run the executable:
 
@@ -116,7 +112,6 @@ This should show the help output.
 
 <br/>
 [Back To - Home](../README.md)
-
 
 
 [OS X Development Quick Start Guide]: OS-X-Development-Quick-Start-Guide
