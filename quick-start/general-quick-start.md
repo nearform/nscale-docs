@@ -41,7 +41,7 @@ nscale login
 
 To get up and running straight away we're going to clone an
 existing system, for a longer explanation of how to get started
-from scratch see [Getting Started From Scratch][]
+from scratch see our tutorial on [Creating a System](../tutorials/2-create-a-system.md).
 
 We'll be using nearForm's canonical "Hello World" example.
 
