@@ -133,7 +133,7 @@ To install nscale we simply run
 sudo npm i -g nscale
 ```
 
-This will provide an executable named `nscale` (standing for nscale Deployer),
+This will provide an executable named `nscale`
 which is the main tool for managing distrubuted systems deployment.
 
 We can test that the install was successful by attempting to run the executable:
