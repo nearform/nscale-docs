@@ -8,31 +8,31 @@
 This guide will walk you through each command that can be executed with the nscale CLI.
 
 ## help
-To list available commands execute `nsd help`:
+To list available commands execute `nscale help`:
 
-    $ nsd help
+    $ nscale help
 
-## nsd host
+## nscale host
 
-The nsd host is the server running the nsd system.
+The nscale host is the server running the nscale system.
 
-To set the ndf host execute `nsd use`:
+To set the ndf host execute `nscale use`:
 
-    Usage: nsd use HOST [PORT]
+    Usage: nscale use HOST [PORT]
 
     Example:
-    $ nsd use localhost 3223
+    $ nscale use localhost 3223
 
 ## login
 
-To authenticate with the nsd host execute `nsd login` and either login by username/password or with your github account.
+To authenticate with the nscale host execute `nscale login` and either login by username/password or with your github account.
 
-    Usage: nsd login
+    Usage: nscale login
 
 ### username/password login
 
-    $ nsd login
-    prompt: nsd username / password login (y/n): y
+    $ nscale login
+    prompt: nscale username / password login (y/n): y
     prompt: username: <username>
     prompt: password: <password>
 
@@ -40,149 +40,116 @@ To authenticate with the nsd host execute `nsd login` and either login by userna
 
 First generate a new github personal access token in [https://github.com/settings/applications](https://github.com/settings/applications), remembering to select the 'repo' and 'user' scopes.
 
-    $ nsd login
-    prompt: nsd username / password login (y/n): n
+    $ nscale login
+    prompt: nscale username / password login (y/n): n
     prompt: github access token: <personal access token>
 
 ## logout
 
-To logout from the nsd host execute `nsd logout`:
+To logout from the nscale host execute `nscale logout`:
 
-    Usage: nsd logout
+    Usage: nscale logout
 
     Example:
-    $ nsd logout
+    $ nscale logout
 
 ## system
 
-A nsd system is represented by a set of connected containers that are configured, built and deployed to constitute a working platform for distributed applications.
+A nscale system is represented by a set of connected containers that are configured, built and deployed to constitute a working platform for distributed applications.
 
 ### system create
 
-To create a blank system execute `nsd system create`:
+To create a blank system execute `nscale system create`:
 
-    Usage: nsd system create
+    Usage: nscale system create
 
     Example:
-    $ nsd system create
+    $ nscale system create
     prompt: name: <name>
     prompt: namespace: <namespace>
     prompt: confirm (y/n): y
 
-### system clone
-
-To clone a system from an existing git repository execute `nsd system clone`:
-
-    Usage: nsd system clone REPO
-
-    Example:
-    $ nsd system clone git@github.com:nearform/nsd-demo
-
-### system sync
-
-To sync a system with its git repository execute `nsd system sync`:
-
-    Usage: nsd system sync NAME
-
-    Example:
-    $ nsd system sync nsd-demo
-
 ### system list
 
-To list all systems execute `nsd system list`:
+To list all systems execute `nscale system list`:
 
-    Usage: nsd system list
-
-    Example:
-    $ nsd system list
-
-### system put
-
-To update a system with a new revision execute `nsd system put`:
-
-    Usage: nsd system put < FILE
+    Usage: nscale system list
 
     Example:
-    $ nsd system put < nsd-demo.json
+    $ nscale system list
 
-### system deployed
+### system current
 
-To get the deployed revision of a system execute `nsd system deployed`:
+To get the system definition of a currently deployed revision execute: `nscale system current`:
 
-    Usage: nsd system deployed NAME
+    Usage: nscale system current NAME TARGET
 
     Example:
-    $ nsd system deployed nsd-demo
+    $ nscale system deployed nscale-demo process
 
 ### system analyze
 
-To run an analysis of a system execute `nsd system analyze`:
+To run an analysis of a system execute `nscale system analyze`:
 
-    Usage: nsd system analyze NAME
+    Usage: nscale system analyze NAME
 
     Example:
-    $ nsd system analyze nsd-demo
+    $ nscale system analyze nscale-demo process
 
 ### system check
 
-To run and verify an analysis of a system execute `nsd system check`:
+To run and verify an analysis of a system execute `nscale system check`:
 
-    Usage: nsd system check NAME
+    Usage: nscale system check NAME TARGET
 
     Example:
-    $ nsd system check nsd-demo
+    $ nscale system check nscale-demo process
+
+### system fix
+Having run a system check, if deviation from the desired system state has been detected, execute `system fix`:
+
+    Usage: nscale system fix NAME TARGET
+
+    Example:
+    $ nscale system fix sudc-system aws
 
 ## container
 
 A container is a reusable and configurable system resource that can be built and deployed across one or more physical nodes.
 
-The currently supported container types are docker (Docker container), aws-ami (Amazon machine image), aws-sg (Amazon security group), and aws-elb (Amazon load balancer).
+The currently supported container types are docker (Docker container), aws-ami (Amazon machine image), aws-sg (Amazon security group), and aws-elb (Amazon load balancer). We have also introduced the __experimental__ process-container.
 
 ### container list
 
-To list all containers of a system execute `nsd container list`:
+To list all containers of a system execute `nscale container list`:
 
-    Usage: nsd container list NAME
-
-    Example:
-    $ nsd container list nsd-demo
-
-### container add
-
-To add a container to a system execute `nsd container add`:
-
-    Usage: nsd container add NAME
+    Usage: nscale container list NAME
 
     Example:
-    $ nsd container add nsd-demo
-    prompt: type: docker
+    $ nscale container list nscale-demo
 
-### container put
-
-To update a container with a new revision execute `nsd container put`:
-
-    Usage: nsd container put < FILE
-
-    Example:
-    $ nsd container put < container.json
-
-### container delete
-
-To delete a container from a system execute `nsd container delete`:
-
-    Usage: nsd container delete NAME CONTAINER
-
-    Example:
-    $ nsd container delete nsd-demo web
 
 ### container build
 
-To build a container of a system execute `nsd container build`:
+To build a single container of a system execute `nscale container build`:
 
-    Usage: nsd container build NAME CONTAINER
+    Usage: nscale container build NAME CONTAINER REVISION TARGET
 
     Example:
-    $ nsd container build nsd-demo web
+    $ nscale container build nscale-demo web latest development
+
+    Note: Target is optional. The container is built for all targets if none is supplied.
+
+### container buildall
+
+To build all containers for a system execute `nscale container buildall`:
+    
+    Usage: nscale container buildall NAME REVISION TARGET
+
+    Example:
+    $ nscale container buildall sudc-system latest aws
+
+    Note: Target is optional. The container is built for all targets if none is supplied.
 
 ## Revision
 
@@ -190,66 +157,66 @@ A revision is a recorded system snapshot, automatically saved whenever there are
 
 ### revision list
 
-To list all revisions of a system execute `nsd revision list`:
+To list all revisions of a system execute `nscale revision list`:
 
-    Usage: nsd revision list NAME
+    Usage: nscale revision list NAME
 
     Example:
-    $ nsd revision list nsd-demo
+    $ nscale revision list nscale-demo
 
 ### revision get
 
-To get a revision of a system execute `nsd revision get`:
+To get a revision of a system execute `nscale revision get`:
 
-    Usage: nsd revision get NAME REVISION
+    Usage: nscale revision get NAME REVISION
 
     Example:
-    $ nsd revision get nsd-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf
+    $ nscale revision get nscale-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf
 
 ### revision deploy
 
-To deploy a revision of a system execute `nsd revision deploy`:
+To deploy a revision of a system execute `nscale revision deploy`:
 
-    Usage: nsd revision deploy NAME REVISION
+    Usage: nscale revision deploy NAME REVISION TARGET
 
     Example:
-    $ nsd revision deploy nsd-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf
+    $ nscale revision deploy nscale-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf development
 
 ### revision mark
 
-To mark a revision of a system as being deployed execute `nsd revision mark`:
+To mark a revision of a system as being deployed execute `nscale revision mark`:
 
-    Usage: nsd revision mark NAME REVISION
+    Usage: nscale revision mark NAME REVISION
 
     Example:
-    $ nsd revision mark nsd-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf
+    $ nscale revision mark nscale-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf
 
 ### revision preview
 
-To preview the deploy workflow for a revision of a system execute `nsd revision preview`:
+To preview the deploy workflow for a revision of a system execute `nscale revision preview`:
 
-    Usage: nsd revision preview NAME REVISION
+    Usage: nscale revision preview NAME REVISION TARGET
 
     Example:
-    $ nsd revision preview nsd-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf
+    $ nscale revision preview nscale-demo 33417ff8f1299c1b35c40b562c5b8310cf66a4cf development
 
 ## remote add
 
 To add a remote git repository to an existing system execute 'remote add':
 
-    Usage: nsd remote add NAME REPO
+    Usage: nscale remote add NAME REPO
 
     Example:
-    $ nsd remote add nsd-demo git@github.com:nearform/nsd-demo
+    $ nscale remote add nscale-demo git@github.com:nearform/nscale-demo
 
 ## timeline list
 
 To get the system timeline execute 'timeline list':
 
-    Usage: nsd timeline list NAME
+    Usage: nscale timeline list NAME
 
     Example:
-    $ nsd timeline list nsd-demo
+    $ nscale timeline list nscale-demo
 
 
 <br/>

@@ -12,11 +12,10 @@ This repository contains documentation and guides relating to the setup and usag
 
 ## Setup Guides
 
-> _Configure your platform with nscale and it's prerequisites._
+> _Configure your platform with nscale and its prerequisites._
 
 - [OS X](./setup-guides/osx-setup-guide.md)
 - [Linux](./setup-guides/linux-setup-guide.md)
-- [Vagrant](./setup-guides/vagrant-setup-guide.md)
 - [AWS](./setup-guides/aws-setup-guide.md)
 
 ## Quick Start
@@ -27,9 +26,9 @@ This repository contains documentation and guides relating to the setup and usag
 
 ## Tutorials
 
-> _Our tutorials are more detailed that quick starts and great for use at workshops._
+> _A linear set of exercises which should take no more than 1 hour. Serves as a great workshop._
 
-- [nodeconf.eu workshop](https://github.com/nearform/nscale-workshop)
+- [Tutorials](./tutorials/)
 
 ## System
 
