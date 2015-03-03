@@ -26,7 +26,7 @@ This repository contains documentation and guides relating to the setup and usag
 
 ## Tutorials
 
-> _A linear set of exercises which should take no more than 1 hour. More detailed than the quick start guides, this serves as a great workshop._
+> _A linear set of exercises which should take no more than 1 hour. Serves as a great workshop._
 
 - [Tutorials](https://github.com/nearform/nscale-workshop)
 
