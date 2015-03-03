@@ -19,22 +19,22 @@ prepare your system for use.
 * nscale
 
 ## Booting the nscale kernel
-The `nsd` executable is a command line client app, it interacts
-with a kernel server. Most `nsd` commands rely on the
+The `nscale` executable is a command line client app, it interacts
+with a kernel server. Most `nscale` commands rely on the
 kernel server, so the first thing we need to do is start it:
 
 ```
-nsd server start
+nscale server start
 ```
 
 > In a production scenario (or as a convenience) we could
 > create a small script to run the kernel server on start up.
 
-## Login to nsd
-First you must login to nsd.
+## Login to nscale
+First you must login to nscale.
 
 ```
-nsd login
+nscale login
 ```
 
 ## Cloning a System
@@ -48,19 +48,19 @@ We'll be using nearForm's canonical "Hello World" example.
 To clone the system we do,
 
 ```
-nsd system clone git@github.com:nearform/nscaledemo.git
+nscale system clone git@github.com:nearform/nscaledemo.git
 ```
 
 It doesn't matter what directory we're in when we do this. nscale
 manages any imported files internally - we simply interact with
-the system those files represent through the `nsd` command line interface.
+the system those files represent through the `nscale` command line interface.
 
 ## Listing Systems
 
 Let's make sure our system was installed
 
 ```
-nsd system list
+nscale system list
 ```
 
 This should output something like this
@@ -76,17 +76,17 @@ Our cloned system has two containers (see [Containers][]), let's list
 them:
 
 ```
-nsd container list e1144711-47bb-5931-9117-94f01dd20f6f
+nscale container list e1144711-47bb-5931-9117-94f01dd20f6f
 ```
 
-The nsd help for `nsd container list` requires a `systemid`, however
+The nscale help for `nscale container list` requires a `systemid`, however
 we can also reference our system by name
 
 ```
-nsd container list nscaledemo
+nscale container list nscaledemo
 ```
 
-In both cases, `nsd`  should output
+In both cases, `nscale`  should output
 
 ```
 Name                 Type            Id                                                 Version         Dependencies
@@ -108,7 +108,7 @@ which contains a microservice (see [Microservices][]) which provides
 a web server, that responds to requests with an HTML file containing "Hello World!".
 
 ```
-nsd container build nscaledemo web
+nscale container build nscaledemo web
 ```
 
 ## Deploying a System
@@ -117,7 +117,7 @@ Any time we build a container, our system is modified, this is reflected
 in the revision list
 
 ```
-nsd revision list nscaledemo
+nscale revision list nscaledemo
 ```
 
 To deploy our system in it's latest state, we take the top revision number
@@ -125,10 +125,10 @@ use it with `revision deploy`. So if the latest revision id was `2a934f8e9cf8c98
 we would do:
 
 ```
-nsd revision deploy nscaledemo 2a934f8e9cf8c98f2ac
+nscale revision deploy nscaledemo 2a934f8e9cf8c98f2ac
 ```
 
-If that was successful, if we list our revisions again with `nsd revision list nscaledemo` the revision we have deployed should have `true` in the `deployed` column:
+If that was successful, if we list our revisions again with `nscale revision list nscaledemo` the revision we have deployed should have `true` in the `deployed` column:
 
 ```
 revision             deployed who                                                     time                      description

@@ -60,7 +60,7 @@ npm install -g nscale
 SSH into the vagrant box and run the following to start the kernel server
 
 ```sh
-nsd server start
+nscale server start
 ```
 
 ### Login
@@ -68,19 +68,19 @@ nsd server start
 By default, login uses the email defined in ~/.gitconfig and that is all that is required.
 
 ```sh
-nsd login
+nscale login
 ```
 
 ### Clone nscale demo
 
 ```sh
-nsd system clone git@github.com:nearform/nscaledemo.git
+nscale system clone git@github.com:nearform/nscaledemo.git
 ```
 
 ### Build web container
 
 ```sh
-nsd container build nscaledemo web
+nscale container build nscaledemo web
 ```
 
 ### Deploy nscale demo
@@ -88,8 +88,8 @@ nsd container build nscaledemo web
 Replace \<revision_id\> with the latest revision shown by the revision list command.
 
 ```sh
-nsd revision list nscaledemo
-nsd revision deploy nscaledemo <revision_id>
+nscale revision list nscaledemo
+nscale revision deploy nscaledemo <revision_id>
 ```
 
 ### Test nscale demo is up and running

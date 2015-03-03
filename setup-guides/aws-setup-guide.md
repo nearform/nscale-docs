@@ -45,7 +45,7 @@ sudo n latest
 ## Github
 
 `nscale` uses both and git and Github extensively, in order for commands
-like `nsd system clone` to work. We need to have the git user name and
+like `nscale system clone` to work. We need to have the git user name and
 email set to our Github login and have `ssh-keys` set up with Github.
 
 To set our Github use and email we do:
