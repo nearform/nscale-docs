@@ -1,6 +1,6 @@
 Configuration & Logs
 ============
-[Tutorials Home](./) | [Next up: exercise 5](./5-update-&-rollback.md)
+[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./) 
 
 This tutorial covers:
 
@@ -88,4 +88,4 @@ nscale server logs api.log
 nscale server logs web.log
 ```
 
-[Tutorials Home](./) | [Next up: exercise 5](./5-update-&-rollback.md)
+[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./) 

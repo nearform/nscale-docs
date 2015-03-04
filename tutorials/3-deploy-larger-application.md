@@ -1,6 +1,6 @@
 A Larger Application
 =======================
-[Tutorials Home](./) | [Next up: exercise 4](./4-config-&-logs.md)
+[Previous](./2-create-a-system.md) | [Next](./4-config-&-logs.md) | [Home](./)
 
 This tutorial covers:
 
@@ -186,4 +186,4 @@ Linux:
 open [localhost:8000](http://localhost:8000)
 	
 
-[Tutorials Home](./) | [Next up: exercise 4](./4-config-&-logs.md)
+[Previous](./2-create-a-system.md) | [Next](./4-config-&-logs.md) | [Home](./)

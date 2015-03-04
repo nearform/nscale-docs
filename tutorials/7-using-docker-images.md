@@ -1,6 +1,6 @@
 Use an image from Docker Hub
 ==================================
-[Tutorials Home](./) | [Next up: exercise 8](./8-deploy-to-aws.md)
+[Home](./) | [Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md)
 
 This tutorial covers:
 
@@ -153,4 +153,4 @@ you may need to install redis-tools
 sudo apt-get install redis-tools
 ```
 
-[Tutorials Home](./) | [Next up: exercise 8](./8-deploy-to-aws.md)
+[Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md) | [Home](./)

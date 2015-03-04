@@ -1,6 +1,6 @@
 Update & Rollback
 ========
-[Tutorials Home](./) | [Next up: exercise 6](./6-system-fix.md)
+[Previous](./4-config-&-logs.md) | [Next](./6-system-fix.md) | [Home](./)
 
 This tutorial covers:
 
@@ -110,4 +110,4 @@ open http://$(boot2docker ip):8000
 Linux:
 open [localhost:8000](http://localhost:8000)
 
-[Tutorials Home](./) | [Next up: exercise 6](./6-system-fix.md)
+[Previous](./4-config-&-logs.md) | [Next](./6-system-fix.md) | [Home](./)
