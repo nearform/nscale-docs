@@ -1,6 +1,6 @@
 Create a System With NScale
 ===================
-[Tutorials Home](../) | [Next up: exercise 3](./3-deploy-larger-application.md)
+[Tutorials Home](./) | [Next up: exercise 3](./3-deploy-larger-application.md)
 
 This tutorial covers:
 
@@ -294,4 +294,4 @@ prepare the build.
 
 Thanks to this file, we can build multiple containers from the same git repository.
 
-[Tutorials Home](../) | [Next up: exercise 3](./3-deploy-larger-application.md)
+[Tutorials Home](./) | [Next up: exercise 3](./3-deploy-larger-application.md)

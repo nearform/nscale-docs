@@ -1,6 +1,6 @@
 Deploying on AWS
 ================
-[Tutorials Home](../) 
+[Tutorials Home](./) 
 
 This tutorial covers:
 
@@ -288,4 +288,4 @@ nscale system check sudc aws
 ```
 Congratulations - you are now an nscale AWS ninja!
 
-[Tutorials Home](../) 
+[Tutorials Home](./) 

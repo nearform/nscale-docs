@@ -1,6 +1,6 @@
 NScale Intro
 ============
-[Tutorials Home](../) | [Next up: exercise 2](./2-create-a-system.md)
+[Tutorials Home](./) | [Next up: exercise 2](./2-create-a-system.md)
 
 This tutorial covers:
 
@@ -274,4 +274,4 @@ Stop the running docker container before moving on to the next exercise.
 docker ps
 docker stop <container id>
 ```
-[Tutorials Home](../) | [Next up: exercise 2](./2-create-a-system.md)
+[Tutorials Home](./) | [Next up: exercise 2](./2-create-a-system.md)

@@ -1,6 +1,6 @@
 A Larger Application
 =======================
-[Tutorials Home](../) | [Next up: exercise 4](./4-config-&-logs.md)
+[Tutorials Home](./) | [Next up: exercise 4](./4-config-&-logs.md)
 
 This tutorial covers:
 
@@ -186,4 +186,4 @@ Linux:
 open [localhost:8000](http://localhost:8000)
 	
 
-[Tutorials Home](../) | [Next up: exercise 4](./4-config-&-logs.md)
+[Tutorials Home](./) | [Next up: exercise 4](./4-config-&-logs.md)
