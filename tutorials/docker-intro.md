@@ -1,6 +1,7 @@
 
 Docker Introduction
 ===================
+[Tutorials Home](../) | [Next up: nscale intro](./1-nscale-intro.md) 
 
 This exercise walks through:
 
@@ -156,5 +157,5 @@ $ curl http://localhost:80
 Here's one we made earlier: 
 <https://github.com/nearform/nscale-workshop-intro-docker-sample>
 
-[Next up: nscale intro](./1-nscale-intro.md)
+[Tutorials Home](../) | [Next up: nscale intro](./1-nscale-intro.md)
 

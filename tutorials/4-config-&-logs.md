@@ -1,5 +1,6 @@
 Configuration & Logs
 ============
+[Tutorials Home](../) | [Next up: exercise 5](./5-update-&-rollback.md)
 
 This tutorial covers:
 
@@ -87,4 +88,4 @@ nscale server logs api.log
 nscale server logs web.log
 ```
 
-[Next up: exercise 5](./5-update-&-rollback.md)
+[Tutorials Home](../) | [Next up: exercise 5](./5-update-&-rollback.md)

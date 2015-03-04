@@ -1,5 +1,6 @@
 Deploying on AWS
 ================
+[Tutorials Home](../) 
 
 This tutorial covers:
 
@@ -286,3 +287,5 @@ nscale will now boot up a replacement machine and deploy the appropriate contain
 nscale system check sudc aws
 ```
 Congratulations - you are now an nscale AWS ninja!
+
+[Tutorials Home](../) 

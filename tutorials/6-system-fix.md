@@ -1,5 +1,6 @@
 Check and fix
 =============
+[Tutorials Home](../) | [Next up: exercise 7](./7-using-docker-images.md)
 
 This tutorial covers:
 
@@ -91,4 +92,4 @@ open http://$(boot2docker ip):8000
 Linux:
 open [localhost:8000](http://localhost:8000)
 
-[Next up: exercise 7](./7-using-docker-images.md)
+[Tutorials Home](../) | [Next up: exercise 7](./7-using-docker-images.md)
