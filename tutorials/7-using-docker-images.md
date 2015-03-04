@@ -1,6 +1,6 @@
 Use an image from Docker Hub
 ==================================
-[Home](./) | [Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md)
+[Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md) | [Home](./)
 
 This tutorial covers:
 
