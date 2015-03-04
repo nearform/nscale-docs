@@ -23,6 +23,12 @@ What is nscale?
 #### Docker
 We should have docker installed on our system as per the previous exercise.
 
+As previously mentioned, make sure to add yourself to the docker group using:
+```bash
+sudo usermod -G docker -a 'whoami'
+```
+ ___nscale requires this to work correctly.___
+
 #### Git
 `nscale` uses git to track revision history so we will need git installed on our system. We need to configure our `git` username and email for `nscale` to track revisions correctly.
 
