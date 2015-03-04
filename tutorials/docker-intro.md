@@ -30,7 +30,13 @@ If you are on Mac OS X, follow https://docs.docker.com/installation/mac/
 Alternatively, see Docker's list of installation guides [here](https://docs.docker.com/installation/).
 
 If any software listed in the guides is already installed on your system, you can
-of course skip those steps. 
+of course skip those steps.
+
+___Note:___ Once you have docker installed, add yourself to the docker group using:
+```bash
+sudo usermod -G docker -a 'whoami'
+```
+ ___nscale requires this to work correctly.___
 
 ### Basic knowledge of Docker
 
