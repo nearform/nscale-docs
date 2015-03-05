@@ -30,14 +30,19 @@ nscale container list sudc
 You should see the following containers:
 
 ```bash
-	root                 root
-	web                  docker
-	hist                 docker
-	real                 docker
-	doc                  docker
+Name                 Type                 Id                                                
+awsWebElb            aws-elb              awsWebElb                                         
+awsWebSg             aws-sg               awsWebSg                                          
+demo2                aws-ami              awsMachine                                        
+doc                  process              doc$77c4014bef47deb4fef3af579f2959457c058ce8      
+hist                 process              hist$39f0c71b89f3ba78064468c0af79017927f1a6cb     
+real                 process              real$5309ad7aeba319fd44adb18bbc983f4587f16af9     
+web                  process              web$e2021682ad1d25287321a4883535252ba684d9ba      
+root                 blank-container      root
 ```
 
-The application is composed of a web front end and three additional services.
+The actual application is composed of a web front end and three additional services (doc, hist, real).
+The additional containers awsWebElb, awsWebSg, and demo2 are AWS containers which we cover later!
 
 Build the system
 ----------------
@@ -50,35 +55,13 @@ nscale container buildall sudc latest development
 Alternatively, you can build all the containers by themselves:
 
 ```bash
-nscale container build sudc hist
-nscale container build sudc real
-nscale container build sudc doc
-nscale container build sudc web
+nscale container build sudc hist latest development
+nscale container build sudc real latest development
+nscale container build sudc doc latest development
+nscale container build sudc web latest development
 ```
 
 After those have all completed we should have four containers ready for deployment.
-
-GUI
----
-Now we can take a look at the startup death clock system using the graphical interface. We just need to point our browser to <a href="http://localhost:9000" target="_blank">http://localhost:9000</a>.
-
-![image](./img/systems.png)
-
-We can go to the container view via the sudclocal link,
-
-![image](./img/containers.png)
-
-show the revision list by clicking on the Revisions tab,
-
-![image](./img/revisions.png)
-
-show the system state by clicking on the System state tab,
-
-![image](./img/topology.png)
-
-and show the timeline by clicking on the System timeline tab.
-
-![image](./img/timeline.png)
 
 Previewing the deployment
 -------------------------

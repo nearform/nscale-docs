@@ -47,8 +47,11 @@ This allows the remote instance to use your local ssh key for cloning Github rep
 
 Once the above dependencies have been met you can proceed to install nscale using 
 ```bash
-$sudo npm install -g nscale
+$npm install -g nscale
 ```
+
+Lastly you must either your amazon private keyfile or generate a new public/private keypair.
+The private key will be used by nscale for connecting to other remote instances it creates via ssh.
 
 Recommended
 ----------------------
@@ -176,22 +179,18 @@ Lets get started by cloning the repository onto our AWS management system. First
 git clone git@github.com:nearform/sudc-system.git
 nscale system link sudc-system
 ```
-This will pull down the code for the Startup Death Clock system. In order to work with the AWS version of the system we will need to switch branches. to do this:
-```bash
-cd /home/ubuntu/work/sudc/sudc-system
-git checkout v0.14
-```
-Lets take a look at the differences between the local configuration (on the master branch) and the AWS version:
-
 ####Infrastructure
-The AWS version contains an additional file awsInfrastructure.js, which contains some AWS specific component definitions
+nscale compiles from all .js files under the services folder so we can logically organise our container definitions any way we want.
+The aws specific definitions are in the awsInfrastructure.js file
+
+it defines three containers:
 
  * awsWebElb - elastic load balancer definition
  * awsWebSg - security group definition
  * awsMachine - base AMI definition
 
 ####Topology
-The AWS version also contains an updated topology in system.js which is specific for deployment into our AWS infrastructure. The topology section is as follows:
+in system.js we can define as many topologies as we want. Each topology is given its own target name e.g. development, process or aws. The aws topology is as follows:
 
 ```
   aws: {
@@ -207,7 +206,7 @@ The topology section defines how the service containers are distributed amongst 
 ####Edit
 In order to make this work we need to make some minor adjustments to the ids specified in the ```awsInfrastructure.js``` file:
 
-* replace AMI-ID - open the file definitions/awsInfrastructure
+Open the file definitions/awsInfrastructure
   * under awsWebElb change the AvailabilityZone setting to match your availability zone
   * under awsWebSg change the VpcId setting to match your VPC
   * under awsMachine change the ImageId to match your ami id
@@ -225,16 +224,20 @@ Now let's take a look at the system definition:
 nscale container list sudc
 ```
 You should see the following containers:
-
-	web                  docker
-	hist                 docker
-	real                 docker
-	doc                  docker
-
+```bash
+awsWebElb            aws-elb              awsWebElb                                         
+awsWebSg             aws-sg               awsWebSg                                          
+demo2                aws-ami              awsMachine                                        
+doc                  process              doc$77c4014bef47deb4fef3af579f2959457c058ce8      
+hist                 process              hist$39f0c71b89f3ba78064468c0af79017927f1a6cb     
+real                 process              real$5309ad7aeba319fd44adb18bbc983f4587f16af9     
+web                  process              web$e2021682ad1d25287321a4883535252ba684d9ba      
+root                 blank-container      root 
+```
 ####Build the system
 Let's go ahead and build the containers ready for deployment:
 ```bash
-nscale container buildall sudc
+nscale container buildall sudc latest aws
 ```
 Alternatively, you can build all the containers by themselves:
 

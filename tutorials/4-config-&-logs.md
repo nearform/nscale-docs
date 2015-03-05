@@ -48,13 +48,15 @@ The modules section defines the following:
   },
 ```
 
-Right now we the auth module just picks up your git credentials, however this is open for extension with and can be replaced with other authentication strategies.
+Right now the auth module just picks up your git credentials, however this is open for extension with and can be replaced with other authentication strategies.
 
 The analysis module implements the logic that queries a running system for comparison against the desired system state. Right now nscale has a local boot2docker analyzer and also and Amazon web services analyzer.
 
 The containers section defines the following:
 
-	containers - list of supported container types.
+	containers - list of container types the kernel will import. 
+  This list can be extended to import various aws containers. 
+  Support for other platforms may come in the future. 
 
 ```js
 "containers": [
@@ -73,7 +75,7 @@ The containers section defines the following:
   ]
 ```
 
-For this workshop we are using just the virtualbox and boot2docker containers. Nscale also has additional containers for AWS deployment. The intent is that this provides an open framework for extension into other platforms.
+By default only docker and process containers are imported. Nscale also has additional containers for AWS deployment. The intent is that this provides an open framework for extension into other platforms.
 
 The `nscale` root folder looks as follows:
 

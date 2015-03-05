@@ -33,7 +33,7 @@ nscale system analyze sudc development
 Kill two of the containers
 -------------
 
-Now we'll kill the `web` and `doc-srv` containers:
+Now we'll kill the `web` and `doc` containers:
 ```bash
 docker ps
 docker kill <web container id>

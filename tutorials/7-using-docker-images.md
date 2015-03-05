@@ -37,7 +37,7 @@ currently looks like:
 
 ```js
 exports.root = {
-    type: 'blank-container'
+  type: 'blank-container'
 };
 
 // Example
@@ -47,8 +47,9 @@ exports.root = {
 //     specific: {
 //       repositoryUrl: 'git@github.com:nearform/nscaledemoweb.git',
 //       execute: {
+//         // docker run <ARGS> image <EXEC>
 //         args: '-p 8000:8000 -d',
-//         exec: '/usr/bin/node index.js'
+//         exec: ''
 //       }
 //     }
 // }; 

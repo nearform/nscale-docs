@@ -34,7 +34,7 @@ of course skip those steps.
 
 ___Note:___ Once you have docker installed, add yourself to the docker group using:
 ```bash
-sudo usermod -G docker -a 'whoami'
+sudo usermod -G docker -a `whoami`
 ```
  ___nscale requires this to work correctly.___
 
