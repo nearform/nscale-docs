@@ -50,12 +50,12 @@ Once the above dependencies have been met you can proceed to install nscale usin
 $npm install -g nscale
 ```
 
-Lastly you must either your amazon private keyfile or generate a new public/private keypair.
-The private key will be used by nscale for connecting to other remote instances it creates via ssh.
+Lastly you must copy the private key file used for connecting to the instance onto the instance itself.
+The private key will be used by nscale for connecting to other remote instances it creates.
 
 Recommended
 ----------------------
-To make life easier, there is a powerful tool called SSHFS which allows you to mount a remote file system locally. This lets you view files on your remote instance in your file browser and you'll be able to edit them using graphical editors. Check out the guide to using it [here](http://www.emreakkas.com/linux-tips/how-to-mount-amazon-ec2-drive-locally-fuse-sshfs)
+To make life easier, there is a powerful tool called SSHFS which allows you to mount a remote file system locally via ssh. This lets you view files on your remote instance in your file browser and you'll be able to edit them using graphical editors. Check out the guide to using it [here](http://www.emreakkas.com/linux-tips/how-to-mount-amazon-ec2-drive-locally-fuse-sshfs)
 
 Configuring AMIs for use with nscale
 ------------------------------------
@@ -75,7 +75,7 @@ In order to operate correctly on AWS the nscale coniguration file (~/.nscale/con
 
 * Kernel section
   * user - the username to use when connecting to remove systems (ubuntu)
-  * identityFile - path to the ssh key file required to connect to remote systmes
+  * identityFile - the full path to the ssh key file required to connect to remote systmes
   * region - the AWS region you are using
   * accessKeyId - your AWS API access key
   * secretAccessKey- your AWS secret access key
