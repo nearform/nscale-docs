@@ -67,7 +67,7 @@ binroot = /home/YOUR-USERNAME/.local/bin
 manroot = /home/YOUR-USERNAME/.local/share/man
 ```
 
-Browse the index of Node.js versions and download from [here.](http://nodejs.org/dist/) Alternatively just enter:
+Browse the Node.js versions and download one from [here.](http://nodejs.org/dist/) Alternatively just enter:
 ```bash
 wget http://nodejs.org/dist/v0.10.35/node-v0.10.35.tar.gz
 ```
@@ -81,7 +81,7 @@ cd node-v0.10.35
 ./configure --prefix=~/.local
 make
 make install
-
+```
 Create the ~/.node_modules symlink:
 ```bash
 cd
