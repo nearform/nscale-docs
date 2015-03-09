@@ -13,7 +13,7 @@ which npm
 ```
 If these give you any output then you will need to uninstall node which can be tedious. This [Stackoverflow answer](http://stackoverflow.com/a/11178106/1787262) shows every directory that needs to be removed.
 
-Once you are sure our machine is clear of node you can go about installing it properly.
+Once you are sure your machine is completely node free, you can go about installing it properly.
 So far we have documented two ways of doing this.
 
 #Install node with NVM
@@ -58,7 +58,7 @@ which node
 
 You will see that node is installed in your home directory.
 
-# Install node from source under ~/.local instead of /usr/local
+#Install node from source under ~/.local instead of /usr/local
 
 in your home directory create a `.npmrc` file and add the following to it:
 ```
