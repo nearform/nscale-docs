@@ -14,7 +14,7 @@ which npm
 If these give you any output then you will need to uninstall node which can be tedious. This [Stackoverflow answer](http://stackoverflow.com/a/11178106/1787262) shows every directory that needs to be removed.
 
 Once you are sure our machine is clear of node you can go about installing it properly.
-This can be achieved in more than one way.
+So far we have documented two ways of doing this.
 
 #Install node with NVM
 [Node version manager](https://github.com/creationix/nvm) or nvm consists of a few shell scripts which make it really easy to manage multiple versions of node on your machine.
@@ -97,3 +97,6 @@ If it says ~/.local/bin/npm, you're done, otherwise do this:
 export PATH=$HOME/.local/bin:$PATH
 ```
 and add that line to your ~/.profile file to make sure it runs every time you log in.
+
+#Suggestions?
+If you know of any other ways to install node so that sudo isn't required, open an issue in our docs repo and let us know or better yet, issue us a pull request!
