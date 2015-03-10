@@ -37,7 +37,7 @@ It is recommended you install the build-essentials package. Many default AMIs do
 $sudo apt-get install build-essential
 
 
-- Follow our [guide](../setup-guides/install-node.md) to install node the best way.
+- Follow our [guide](../setup-guides/install-node.md) to install node in one of our favourite ways.
 
 # Git
 Install git and configure your credentials:
