@@ -29,8 +29,13 @@ git --version
 ```
 
 If we recieve a command not found error, then there's a number of ways
-we can install. The easiest option install with our distros package manager,
-various commands for different package managers are listed [here][git-install]
+we can install. The easiest option install with our distros package manager.
+
+If you're using ubuntu, simply:
+```bash
+[sudo] apt-get install git
+```
+The various commands for other package managers are listed [here.][git-install]
 
 Alternatively we can build from source by downloading the latest
 release from [git's releases page][git-releases]
@@ -69,7 +74,7 @@ We can test if our keys are correctly set up like so:
 ssh -T -o "VerifyHostKeyDNS yes" git@github.com
 ```
 
-If we're correctly set up, Github will respond that we're succesfully authenticated.
+If we're correctly set up, Github will respond that we've been succesfully authenticated.
 
 ## Docker
 
@@ -77,10 +82,14 @@ Docker provides containers, that can be thought of as isolated environments
 that provide the benefits of running virtual machines but at much
 lower resource cost (see [What is Docker][] for more).
 
-If we don't have docker installed, we'll need to locate an
-[installation guide][docker-install] for our particular
-distro or we can try [downloading the binaries][docker-install-binaries]
-(prefer the packages though).
+If we don't have docker installed, we need to find the appropriate [installation guide][docker-install] for our
+distribution.
+
+Ubuntu users (14.04 and above) can paste this curl script:
+```bash
+curl -sSL https://get.docker.com/ubuntu/ | sudo sh
+```
+alternatively look at the Ubuntu [installation instructions.][docker-ubuntu]
 
 
 ## nscale
@@ -114,6 +123,7 @@ This should show the help output.
 
 [What is Docker]: https://www.docker.com/whatisdocker/
 [docker-install]: https://docs.docker.com/installation/#installation
+[docker-ubuntu]: https://docs.docker.com/installation/ubuntulinux/
 [docker-install-binaries]: https://docs.docker.com/installation/binaries/
 [git-install]: http://git-scm.com/download/linux
 [git-releases]: https://github.com/git/git/releases/
