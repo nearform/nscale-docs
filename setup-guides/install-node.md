@@ -1,6 +1,6 @@
 Installing Node
 ------------------
-It seems one of the most common ways of installing node is by adding a ppa and using a distro package manager such as apt-get. This usually leads to installing node globally, which will require using `sudo` for most npm commands - This is [not a great idea.](http://davidmarkclements.github.io/10-tips/#19) Hands up if you're guilty.
+It seems one of the most common ways of installing node is by adding a ppa and using a distro package manager such as apt-get. This usually leads to installing node globally, which will require using `sudo` for most npm commands - This is [not a great idea.](http://stackoverflow.com/a/4999441) Hands up if you're guilty.
 
 Some solutions will suggest changing the ownership of global directories which isn't great from a security standpoint and it can also be a pain. The real solution is to install node properly!
 
@@ -11,7 +11,7 @@ First we should check to see if node and npm are already installed:
 which node
 which npm
 ```
-If these give you any output then you will need to uninstall node which can be tedious. This [Stackoverflow answer](http://stackoverflow.com/a/11178106/1787262) shows every directory that needs to be removed.
+If these give you any output then you will need to uninstall node which can be tedious. This [Stackoverflow answer](http://stackoverflow.com/a/11178106/1787262) shows every directory that needs to be removed. __These directories may not apply to you depending on your installation.__
 
 Once you are sure your machine is completely node free, you can go about installing it properly.
 So far we have documented two ways of doing this.
@@ -31,22 +31,7 @@ source ~/.profile
 
 now check that it works by entering `nvm` in the terminal. You may need to restart your terminal.
 
-install node:
-```bash
-nvm install 0.10.35
-```
-
-tell nvm to use this version:
-```bash
-nvm use 0.10.35
-```
-
-to list the available versions use:
-```bash
-nvm ls-remote
-```
-
-check that node is installed:
+Check that node is installed:
 ```bash
 node --version
 ```
@@ -58,7 +43,26 @@ which node
 
 You will see that node is installed in your home directory.
 
-#Install node from source under ~/.local instead of /usr/local
+#NVM Commands in a Nutshell
+
+list the available versions:
+```bash
+nvm ls-remote
+```
+
+install a particular version:
+```bash
+nvm install 0.10.35
+```
+
+tell nvm to use a particular version:
+```bash
+nvm use 0.10.35
+```
+
+check out the NVM [Github page](https://github.com/creationix/nvm) for more information.
+
+#Install node from source __locally__
 
 in your home directory create a `.npmrc` file and add the following to it:
 ```
