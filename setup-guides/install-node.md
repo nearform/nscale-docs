@@ -62,7 +62,7 @@ nvm use 0.10.35
 
 check out the NVM [Github page](https://github.com/creationix/nvm) for more information.
 
-#Install node from source __locally__
+#Install node locally from source
 
 in your home directory create a `.npmrc` file and add the following to it:
 ```
