@@ -16,6 +16,7 @@ This repository contains documentation and guides relating to the setup and usag
 
 - [OS X](./setup-guides/osx-setup-guide.md)
 - [Linux](./setup-guides/linux-setup-guide.md)
+- [Ubuntu](./setup-guides/ubuntu-setup-guide.md)
 - [AWS](./setup-guides/aws-setup-guide.md)
 
 ## Quick Start
