@@ -48,7 +48,7 @@ git configure --globar user.email "you@example.com"
 
 Because this machine needs to authenticate with your Github account you can do either of the following:
 
-###configure ForwardAgent###
+###Configure ForwardAgent###
 on your local machine, create the file ~/.ssh/config and insert the following:
 ```
 host *
