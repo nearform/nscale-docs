@@ -40,7 +40,7 @@ $sudo apt-get install build-essential
 - Follow our [guide](../setup-guides/install-node.md) to install node the best way.
 
 # Git
-- Install git and configure your credentials:
+Install git and configure your credentials:
 ```bash
 git configure --global user.name "Your Name"
 git configure --globar user.email "you@example.com"
@@ -48,14 +48,16 @@ git configure --globar user.email "you@example.com"
 
 Because this machine needs to authenticate with your Github account you can do either of the following:
 
-1. on your local machine, create the file ~/.ssh/config and insert the following:
+###Configure ForwardAgent###
+on your local machine, create the file ~/.ssh/config and insert the following:
 ```
 host *
   ForwardAgent yes
 ```
 This allows the remote instance to use your local ssh key for cloning Github repos. You may need to log out and back in to see the effect of this.
 
-2. Generate a new ssh keypair and add it to your Github account. Github has documentation [here](https://help.github.com/articles/generating-ssh-keys/)
+###Generate a new key###
+Generate a new ssh keypair and add it to your Github account. Github has documentation [here](https://help.github.com/articles/generating-ssh-keys/)
 
 Check that you've authenticated with Github:
 ```bash
