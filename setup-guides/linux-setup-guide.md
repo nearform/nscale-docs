@@ -71,7 +71,7 @@ ssh -T -o "VerifyHostKeyDNS yes" git@github.com
 
 If we're correctly set up, Github will respond that we're succesfully authenticated.
 
-# Docker
+## Docker
 
 Docker provides containers, that can be thought of as isolated environments
 that provide the benefits of running virtual machines but at much
