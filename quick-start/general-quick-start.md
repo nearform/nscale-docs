@@ -3,152 +3,221 @@
 
 [Back To - Home](../README.md)
 
-# Quick Start - General
+## Quickstart
+These quickstart instructions will get you up and running with nscale in a local development configuration. For more advanced use cases including production configrations on top of AWS please see the documentation.
 
-This guide is designed to get you up and running with nscale
-on Linux or OSX as quickly as possible.
+nscale requires the following to be installed on your machine:
 
-## Requirements
-If you don't have all of the below requirements you can use the [Linux Setup Guide](../setup-guides/linux-setup-guide.md) or the
-[OS X Setup Guide](../setup-guides/osx-setup-guide.md) to
-prepare your system for use.
+- Docker
+- Node.js
+- Git
 
-* Node
-* Git
-* Docker
-* nscale
+### Install docker
 
-## Booting the nscale kernel
-The `nscale` executable is a command line client app, it interacts
-with a kernel server. Most `nscale` commands rely on the
-kernel server, so the first thing we need to do is start it:
+#### Mac
+If you are on Mac OS X, you need to install and run [boot2docker](https://github.com/boot2docker/boot2docker). Once you have installed boot2docker start it using:
 
+```sh
+boot2docker init
 ```
+
+```sh
+boot2docker up
+```
+
+__IMPORTANT!!!! - Follow the instructions given by boot2docker and ensure that the correct environement variables are set!__
+
+#### Linux
+If you are on Linux, you will need to install [docker](http://docker.io). Once you have docker installed and running you will need to add your user account to the docker group. To do this run the following:
+
+```sh
+sudo usermod -G docker -a `whoami`
+```
+
+You may need to log out and log back in again for this change to take effect. To confirm that you have the appropriate permissions run:
+
+```sh
+groups
+```
+
+You should see that your user is included in the docker group. If this is not apparent you may need to close your current termial session and login again.
+
+__IMPORTANT!!!! nscale will not function correctly unless the group permissions are set as above__
+
+#### Other Platforms
+We understand that there exist other operating systems, however at this time we do not support nscale on them. If you are feeling brave by all means give it a try, we always appreciate __pull requests!!__
+
+### Install node
+
+nscale is built using node.js. To install node, go to the [download page](http://www.nodejs.org) and install the appropritae binary for your system. 
+
+### Install git
+nscale uses git as a backing store for system configuration and versioning. git can be installed using the package manager on your system of choice (i.e. homebrew on osx, apt-get on ubuntu...)
+
+### Configure github access
+Once git is installed, it should be configured for use with github if you wish to follow along with the nscale tutorials. You should run the following to set you username and email address:
+
+```sh
+git config --global user.name "<user name>"
+```
+
+```sh
+git config --global user.email "<email>"
+```
+
+You will need to configure ssh access to github. See [this guide](https://help.github.com/articles/generating-ssh-keys/) to get ssh keys setup.
+
+### Install nscale
+nscale can be installed using npm. To install the latest version run:
+
+```sh
+[sudo] npm install -g nscale
+```
+
+### Preflight check
+Before running nscale please ensure that the terminal you are running in is correctly configured with the above pre-requisties.
+
+#### github
+Ensure github is correctly configured by checking the output of the following command
+
+```sh
+ssh -T -o "VerifyHostKeyDNS yes" git@github.com
+```
+
+#### docker
+Ensure that docker can run correctly by executing the following command
+
+```sh
+docker ps
+```
+
+Note that this command should run __WITHOUT NEEDING SUDO__.
+
+__IMPORTANT!!! If the above checks do not run cleanly, please go back and check your configuration. Don't even think about starting nscale until this is corrected. Seriously... we mean it - We'll be very sad otherwise :(__
+
+### Running nscale
+Now that everything is configured you are good to start nscale:
+
+```sh
 nscale server start
 ```
 
-> In a production scenario (or as a convenience) we could
-> create a small script to run the kernel server on start up.
+If you are running on Linux, you need to add yourself to the `docker`
+group before running any `nscale` command. To do that:
 
-## Login to nscale
-First you must login to nscale.
-
-```
+```sh
 nscale login
 ```
 
-## Cloning a System
+Finally lets check that nscale is good to go by running:
 
-To get up and running straight away we're going to clone an
-existing system, for a longer explanation of how to get started
-from scratch see our tutorial on [Creating a System](../tutorials/2-create-a-system.md).
-
-We'll be using nearForm's canonical "Hello World" example.
-
-To clone the system we do,
-
-```
-nscale system clone git@github.com:nearform/nscaledemo.git
-```
-
-It doesn't matter what directory we're in when we do this. nscale
-manages any imported files internally - we simply interact with
-the system those files represent through the `nscale` command line interface.
-
-## Listing Systems
-
-Let's make sure our system was installed
-
-```
+```sh
 nscale system list
 ```
 
-This should output something like this
-
-```
+You should see output similar to the following
+```sh
 Name                           Id
-nscaledemo                        e1144711-47bb-5931-9117-94f01dd20f6f
 ```
 
-## Listing Containers
+### Run a demo application
+You should now be able to clone and run a small demo application. To do this cd into a new empty working directory and clone the repository:
 
-Our cloned system has two containers (see [Containers][]), let's list
-them:
-
-```
-nscale container list e1144711-47bb-5931-9117-94f01dd20f6f
+```sh
+mkdir ~/work; cd ~/work
 ```
 
-The nscale help for `nscale container list` requires a `systemid`, however
-we can also reference our system by name
-
+```sh
+git clone git@github.com:nearform/nscaledemo.git
 ```
+
+This will create a sub directory named nscaledemo. You now need to link this repository into nscale. By running:
+
+```sh
+nscale system link nscaledemo
+```
+
+Check that the system was linked in correctly by running a system list command again. Which should now contian the linked system:
+
+```sh
+nscale system list
+```
+
+```sh
+Name                           Id
+nscaledemo                     e1144711-47bb-5931-9117-94f01dd20f6f
+```
+
+
+#### Compile the system definition
+In order to work with the demo system we first need to run a compile.
+
+```sh
+nscale system compile nscaledemo
+```
+
+Once the compile has completed you should be able to list the available containers in the system. Run:
+
+```sh
 nscale container list nscaledemo
 ```
 
-In both cases, `nscale`  should output
+You should see the following output
 
+```sh
+Name                 Type                 Id
+root                 container            85d99b2c-06d0-5485-9501-4d4ed429799c
+web                  process              web$2f9f7ddadc8bead84de4a74665085d362b1..
 ```
-Name                 Type            Id                                                 Version         Dependencies
-Machine              virtualbox      85d99b2c-06d0-5485-9501-4d4ed429799c                               ""
-web                  boot2docker     9ddc6c027-9ce2-5fdg-9936-696d2b3789bb              0.0.1           {}
-```
 
-## Building a Container
+#### Build the demo container
+Next you will need to build the example container. To do this run:
 
-Our `Machine` is a virtualbox container, a virtually emulated operating
-system. This can be thought of as the equivalent of a physical server,
-or a "machine" in a virtual hosting plan (such as AWS).
-
-The second container (`web`) is a Docker container, this an isolated OS-like
-environment that can be run on a host system (in this case our `Machine`).
-
-So, for this system, the `Machine` container contains the `web` container,
-which contains a microservice (see [Microservices][]) which provides
-a web server, that responds to requests with an HTML file containing "Hello World!".
-
-```
+```sh
 nscale container build nscaledemo web
 ```
 
-## Deploying a System
+This command will create a docker container ready for nscale to start.
 
-Any time we build a container, our system is modified, this is reflected
-in the revision list
+#### Run the demo
+Before we run the system, take a quick look at the revsion list:
 
-```
+```sh
 nscale revision list nscaledemo
 ```
 
-To deploy our system in it's latest state, we take the top revision number
-use it with `revision deploy`. So if the latest revision id was `2a934f8e9cf8c98f2ac`
-we would do:
+This command shows a list of the revisions on this system repository. You will see a number of commits from the repository that was originally cloned plus a fresh commit representing the compile that was executed a few steps above. Go ahead and run the system by executing:
 
-```
-nscale revision deploy nscaledemo 2a934f8e9cf8c98f2ac
+```sh
+nscale revision deploy nscaledemo latest development
 ```
 
-If that was successful, if we list our revisions again with `nscale revision list nscaledemo` the revision we have deployed should have `true` in the `deployed` column:
+nscale will start the demo container. You can check that all is well by running:
 
-```
-revision             deployed who                                                     time                      description
-2a934f8e9cf8c98f2ac… true     davidmarkclements <me@me.com>                                2014-09-03T09:15:23.000Z  built container: 920718f8542201f9d8daf2f430ce0001…
-```
-
-Finally, we can request a page from our web containers web server,
-we just need to know the address.
-
-The [web microservice][web-app] is an express app that listens on port `8000`.
-
-This port is mapped to our host machine make a request to localhost at port `8000`.
-
-```
-curl http://localhost:8000
-
-open http://localhost:8000
+```sh
+nscale system check nscaledemo development
 ```
 
-We should see "Hello World!".
+And check that the web container is running using:
+
+```sh
+docker ps
+```
+
+You should be able to open a browser and point it to the boot2docker ip address (mac os X) or localhost (linux) port 8000. This should display the string 'hello world'. You can get the boot2docker ip address with the following command:
+
+```sh
+boot2docker ip
+```
+
+So, you can run:
+
+```sh
+open http://`boot2docker ip`:8000
+```
+
+## Next steps
+If you are interested in learning more about nscale try the nscale [tutorials](../tutorials/README.md)
 
 <br/>
 [Back To - Home](../README.md)

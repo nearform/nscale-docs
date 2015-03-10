@@ -1,4 +1,4 @@
-nscale-workshop
+nscale Tutorials
 ===============
 
 ![image](./img/logo.png)
