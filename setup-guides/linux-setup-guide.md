@@ -91,6 +91,12 @@ curl -sSL https://get.docker.com/ubuntu/ | sudo sh
 ```
 alternatively look at the Ubuntu [installation instructions.][docker-ubuntu]
 
+Make sure docker has root permissions:
+
+```bash
+sudo usermod -G docker -a $(whoami)
+```
+___nscale needs this to work.___
 
 ## nscale
 
