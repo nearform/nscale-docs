@@ -5,50 +5,10 @@
 
 # Setup Guides - Linux
 
-This setup guide will walk you through installing nscale and it's prerequisites on Linux.
+This setup guide will walk you through installing nscale and its prerequisites on Linux.
 
-## Node
-
-First we need to ensure we have the latest stable version of
-Node installed. A quick way to check is to open a terminal
-and run
-
-```sh
-node -v
-```
-
-If the command isn't found or the version is less than 0.10.x
-then we'll need install or upgrade Node.
-
-### Build dependencies
-
-If you are running on a fresh linux installation, you might miss some packages for building node.js from source.
-
-On a standard Ubuntu 14.04 LTS release (like on AWS):
-```bash
-$ sudo apt-get install build-essential gcc g++ make
-```
-
-### Installing Node from source
-
-Open a terminal, and type:
-
-```sh
-curl -O http://nodejs.org/dist/v0.10.32/node-v0.10.32.tar.gz
-tar -xvf node-v0.10.32.tar.gz
-cd node-v0.10.32
-./configure
-make
-sudo make install
-```
-
-Check on the [node.js download page](hhttp://nodejs.org/download/) that you are downloading the latest version in the 0.10.x series.
-
-Prefer this method to using a distros installer (like `apt-get`, `yum`, etc)
-as versions tend to lag behind the latest release and  Debian-like system in particular install the Node executable as `nodejs` which tends to
-break command line scripts (so you have to set up soft links).
-
-Another alternative is to use [nvm](http://github.com/creationix/nvm), which allows you to install any node.js version.
+###Installing Node
+Check out our [document](./install-node.md) which outlines our favourite ways of installing node.
 
 ### Upgrading Node
 

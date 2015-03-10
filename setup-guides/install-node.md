@@ -16,6 +16,15 @@ If these give you any output then you will need to uninstall node which can be t
 Once you are sure your machine is completely node free, you can go about installing it properly.
 So far we have documented two ways of doing this.
 
+### Note for Linux Users
+
+If you are running on a fresh linux installation, you might be missing some packages for building node.js from source.
+
+On a standard Ubuntu 14.04 LTS release (like on AWS):
+```bash
+sudo apt-get install build-essential
+```
+
 #Install node with NVM
 [Node version manager](https://github.com/creationix/nvm) or nvm consists of a few shell scripts which make it really easy to manage multiple versions of node on your machine.
 
