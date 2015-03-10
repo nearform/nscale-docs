@@ -4,9 +4,9 @@
 [Back To - Home](../README.md)
 
 # Setup Guides - Ubuntu
-This setup guide is specific to ubuntu 14.04, there is also a [Linux](./linux-setup-guide.md) setup guide avaliable.
+This setup guide is specific to ubuntu 14.04, there is also a [Linux](./linux-setup-guide.md) setup guide available.
 
-Some users perfer to use the ubuntu package manager to install dependancies where possiable, this gude focuses on that.
+Some users prefer to use the Ubuntu package manager to install dependencies where possible, this guide focuses on that.
 
 ## Before Starting
 First we want to ensure that the packages we already have installed are the latest and are up to date, we can do this by
@@ -16,14 +16,14 @@ sudo apt-get update && apt-get upgrade
 ```
 
 ## Packages
-There are several packages that we need, so we can isntall them in one go, this covers node, npm and git. We also want to install
-docker, but will will install that from dockers repository, we will will add that first.
+There are several packages that we need, so we can install them in one go, this covers node, npm and git. We also want to install
+docker, but we will install that from docker's repository, we will will add that first.
 
 The below commands will 
-- Add docker.com's ubuntu repo to your local machine
+- Add docker.com's Ubuntu repo to your local machine
 - Install node, npm, git and docker
 - Add your user to the docker group
-- Launch a new terminal session so you get the new gorup permissions.
+- Launch a new terminal session so you get the new group permissions.
 
 ```sh
 sudo sh -c "echo deb https://get.docker.com/ubuntu docker main\
