@@ -84,11 +84,11 @@ sudo make prefix=/usr/local install
 
 ## Github
 
-nscale uses both and git and Github extensively, in order for commands
+nscale uses both git and Github extensively, in order for commands
 like `nscale system clone` to work. We need to have the git user name and
 email set to our Github login and have `ssh-keys` set up with Github.
 
-To set our Github use and email we do:
+To set our Github user and email we do:
 
 ```
 git config --global user.name "<user name>"
@@ -134,7 +134,7 @@ sudo npm i -g nscale
 ```
 
 This will provide an executable named `nscale`
-which is the main tool for managing distrubuted systems deployment.
+which is the main tool for managing distributed systems deployment.
 
 We can test that the install was successful by attempting to run the executable:
 
