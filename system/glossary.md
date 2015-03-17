@@ -26,6 +26,9 @@ management tool developed and maintained by [nearForm][] and other contributors.
 A well-defined server side protocol used by nscale. May be reimplemented outside
 of nscale for use with 3rd party products and/or services.
 
+## revision
+A recorded system snapshot, automatically saved whenever there are system changes.
+
 ## system
 A collection of containers representing a topological deployment strategy.
 
