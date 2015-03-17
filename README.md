@@ -35,7 +35,7 @@ This repository contains documentation and guides relating to the setup and usag
 > Browse more detailed information on nscale and the concepts behind it.
 
 - [Glossary](./system/glossary.md)
-- [CLI Commands](./system/cli-comands.md)
+- [CLI Commands](./system/cli-commands.md)
 
 ## General
 
