@@ -5,25 +5,11 @@
 
 # Setup Guides - OSX
 
-This setup guide will walk you through installing nscale and it's prerequisites on OS X.
+This setup guide will walk you through installing nscale and its prerequisites on OS X.
 
 ## Node
 
-First we need to ensure we have the latest stable version of
-Node installed. A quick way to check is to open terminal.app
-and run
-
-```sh
-node -v
-```
-
-If the command isn't found or the version is less than 0.10.x
-then we'll need install or upgrade Node.
-
-### Installing Node
-We can head over to <http://nodejs.org> and click the install button,
-this will download a `.pkg` installer, all we need to do is run it and
-follow the installer steps.
+Check out our [document](./install-node.md) which outlines our favourite ways of installing node.
 
 ### Upgrading Node
 

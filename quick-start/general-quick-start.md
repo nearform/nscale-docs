@@ -49,7 +49,7 @@ We understand that there exist other operating systems, however at this time we 
 
 ### Install node
 
-nscale is built using node.js. To install node, go to the [download page](http://www.nodejs.org) and install the appropritae binary for your system. 
+Check out our [document](./install-node.md) which outlines our favourite ways of installing node.
 
 ### Install git
 nscale uses git as a backing store for system configuration and versioning. git can be installed using the package manager on your system of choice (i.e. homebrew on osx, apt-get on ubuntu...)
