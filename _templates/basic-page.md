@@ -1,15 +1,17 @@
 
-![nscale](../_imgs/logo.png)
+![logo][]
 
-[Back To - Home](../README.md)
+[Back To - Home][]
 
 # Your Section - Your Title
-  
+
 Page Summary...
 
 ## Sub Heading
 
 Your content here...
 
-<br/>
-[Back To - Home](../README.md)
+[Back To - Home][]
+
+[logo]: ../_imgs/logo.png
+[Back To - Home]: ../README.md

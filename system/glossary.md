@@ -1,49 +1,43 @@
+![logo][]
+[Back To - Home][]
 
-![nscale](../_imgs/logo.png)
-
-[Back To - Home](../README.md)
-
-# System - CLI Commands
-
-This guide will walk you through some of the domain language used in the context of __nscale__
-
-## nscale
-
-The organisational and module name of a deployment and container management tool. The module can be required via [NPM](http://npmjs.org/nscale), the code is available on [GitHub](http://github.com/nearform/nscale).
-
-## microservice
-
-A small, light-weight, independently deployable service
-having a single focused purpose, designed to communicate
-with other microservices via a well defined interface to
-provide business value.
+# System - Glossary
+This page will walk you through some of the domain language used in the context
+of nscale and other related projects in alphabetical order.
 
 ## container
-
 An isolated host environment that can contain other containers and/or
-microservices. May be a virtual machine, a docker container or some
-other process that provides an isolated OS-like system.
-
-## system
-
-A collection of containers representing a topological deployment strategy.
-
-## nsd
-
-The CLI executable installed when the __nscale__ module is installed,
-the `nscale-client` is the actual module that `nsd` executable links to.
-
-* <http://github.com/nearform/nscale-client>
-
+microservices. May be a virtual machine, a docker container or some other
+process that provides an isolated OS-like system.
 
 ## kernel
+A server-based RPC kernel that supports the `nscale-protocol`.
 
-A server-based RPC kernel that supports the `nscale-protocol`, this
-must be available for the `nscale-client` (the `nsd` executable) to function.
+## microservice
+A small, light-weight, independently deployable service having a single focused
+purpose, designed to communicate with other microservices via a well defined
+interface to provide business value.
 
-* <http://github.com/nearform/nscale-kernel>
-* <http://github.com/nearform/nscale-protocol>
-* <http://github.com/nearform/nscale-api>
+## nscale
+The project, module, and CLI tool name of a container based deployment and
+management tool developed and maintained by [nearForm][] and other contributors.
 
-<br/>
-[Back To - Home](../README.md)
+## nscale-protocol
+A well-defined server side protocol used by nscale. May be reimplemented outside
+of nscale for use with 3rd party products and/or services.
+
+## revision
+A recorded system snapshot, automatically saved whenever there are system changes.
+
+## system
+A collection of containers representing a topological deployment strategy.
+
+## topology
+A logical arrangement of containers in a tree like fashion representing a
+sensical deployment mapping.
+
+[Back To - Home][]
+
+[logo]: ../_imgs/logo.png
+[Back To - Home]: ../README.md
+[nearForm]: www.nearform.com
