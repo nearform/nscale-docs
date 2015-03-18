@@ -1,9 +1,9 @@
 
-![nscale](./_imgs/logo.png)
+<a href='http://nscale.nearform.com'>![nscale](./_imgs/logo.png)</a>
 
 > _A toolkit for application deployments and container management_
 
-__nscale__ is an open source project to configure, build and deploy a set of connected containers to
+__[nscale](http://nscale.nearform.com)__ is an open source project to configure, build and deploy a set of connected containers to
 constitute a working platform for distributed applications. It is written in Javascript and works on
 many different platforms.
 
