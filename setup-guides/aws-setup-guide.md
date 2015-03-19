@@ -1,5 +1,4 @@
-
-![nscale](../_imgs/logo.png)
+<a href='http://nscale.nearform.com'>![logo][]<a>
 
 [Back To - Home](../README.md)
 
@@ -82,11 +81,9 @@ See [here][aws-cli-reference] if you would prefer to use the AWS Command Line In
 
 This should have you set up and ready to use nscale in AWS. To see an example of deploying to AWS, see the [AWS tutorial](../tutorials/8-deploy-to-aws.md)
 
-
+[logo]: ../_imgs/logo.png
 [AWS-signup]: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=h_ct
 [generate-ssh-key]: https://help.github.com/articles/generating-ssh-keys/
 [aws-cli-reference]: http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html
 [docker-ubuntu]: http://docs.docker.com/installation/ubuntulinux/
 [ami-locator]: http://cloud-images.ubuntu.com/locator/ec2/
-
-

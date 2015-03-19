@@ -1,3 +1,5 @@
+<a href='http:nscale.nearform.com'>![logo][]<a>
+
 Create a System With NScale
 ===================
 [Previous](./1-nscale-intro.md) | [Next](./3-deploy-larger-application.md) | [Home](./)
@@ -95,7 +97,7 @@ exports.root = {
 //         exec: ''
 //       }
 //     }
-// }; 
+// };
 ```
 
 To begin defining our system, we need to change it to:
@@ -296,3 +298,5 @@ prepare the build.
 Thanks to this file, we can build multiple containers from the same git repository.
 
 [Previous](./1-nscale-intro.md) | [Next](./3-deploy-larger-application.md) | [Home](./)
+
+[logo]: ../_imgs/logo.png

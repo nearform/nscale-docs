@@ -1,3 +1,4 @@
+<a href='http:nscale.nearform.com'>![logo][]<a>
 
 Docker Introduction
 ===================
@@ -16,7 +17,7 @@ What is Docker?
 
 Docker is an awesome tool we can use to deploy production systems. It allows us to isolate
 our code in completely clean system environments. The `Dockerfile` is a sort of installation
-'recipe' that can be used to initialize a system environment. A Docker container is a 
+'recipe' that can be used to initialize a system environment. A Docker container is a
 fresh Linux environment that bootstraps from a host systems Linux kernel - this gives us a lot
 of the benefits of the VM but without the slow execution and bulk often associated with
 VMs.
@@ -60,7 +61,7 @@ $ docker run -it --rm node node
 
 This command pulls in the official `node` image from the Docker hub and
 tells Docker to open an interactive terminal into the
-container and runs the `node` executable, thus giving us the 
+container and runs the `node` executable, thus giving us the
 Node REPL.
 
 
@@ -160,8 +161,9 @@ $ curl http://localhost:80
 ```
 
 
-Here's one we made earlier: 
+Here's one we made earlier:
 <https://github.com/nearform/nscale-workshop-intro-docker-sample>
 
 [Next up: nscale intro](./1-nscale-intro.md) | [Home](./)
 
+[logo]:../_imgs/logo.png

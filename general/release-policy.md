@@ -1,4 +1,4 @@
-![nscale](../_imgs/logo.png)
+<a href='http://nscale.neaarform.com'>![logo][]<a>
 
 [Back To - Home](../README.md)
 
@@ -31,7 +31,8 @@ regardless of the type of change it is. This file will contain a summarised list
 along with links back to any issues if applicable.
 
 <br/>
-[Back To - Home](../README.md)
 
+[Back To - Home](../README.md)
+[logo]: ../_ims/logo.png
 [ChangeLog]: (https://github.com/nearform/nscale/blob/master/CHANGELOG.md)
 [SemVer]: (http://semver.org/)

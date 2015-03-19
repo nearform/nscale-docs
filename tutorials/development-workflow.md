@@ -1,6 +1,8 @@
+<a href='http:nscale.nearform.com'>![logo][]<a>
+
 Development Workflow
 ====================
-[Tutorials Home](./) 
+[Tutorials Home](./)
 
 Can we use nScale during the development workflow? Yes, with
 process-containers!
@@ -388,3 +390,5 @@ If you change your `server.js`, you will see it is automatically
 reloaded!
 
 [Tutorials Home](./)
+
+[logo]:../_imgs/logo.png

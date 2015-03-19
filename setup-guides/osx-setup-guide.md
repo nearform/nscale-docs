@@ -1,5 +1,4 @@
-
-![nscale](../_imgs/logo.png)
+<a href='http:nscale.nearform.com'>![logo][]<a>
 
 [Back To - Home](../README.md)
 
@@ -98,7 +97,7 @@ This should show the help output.
 
 <br/>
 [Back To - Home](../README.md)
-
+[logo]: ../_imgs/logo.png
 
 [OS X Development Quick Start Guide]: OS-X-Development-Quick-Start-Guide
 

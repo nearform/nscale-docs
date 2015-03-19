@@ -1,3 +1,5 @@
+<a href='http:nscale.nearform.com'>![logo][]<a>
+
 # Installing Node
 It seems one of the most common ways of installing node is by adding a ppa and using a distro package manager such as apt-get. This usually leads to installing node globally, which will require using `sudo` for most npm commands - This is [not a great idea.][sudo-bad-idea] Hands up if you're guilty.
 
@@ -117,7 +119,7 @@ and add that line to your ~/.profile file to make sure it runs every time you lo
 
 ##Suggestions?
 If you know of any other ways to install node so that sudo isn't required, open an issue in our docs repo and let us know or better yet, issue us a pull request!
-
+[logo]: ../_imgs/logo.png
 [node-downloads]: http://nodejs.org/dist/
 [nvm]: http://nodejs.org/dist/
 [uninstall-node]: http://stackoverflow.com/a/11178106/1787262
