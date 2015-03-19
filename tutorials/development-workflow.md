@@ -67,6 +67,7 @@ initialize: function () {
     // Your code here
     alert('Hello World!');
 }
+````
 
 **cd into the sudc/workspace/sudc-web directory**, stage the changes and commit:
 ```bash
