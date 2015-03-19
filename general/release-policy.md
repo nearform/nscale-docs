@@ -33,6 +33,6 @@ along with links back to any issues if applicable.
 <br/>
 
 [Back To - Home](../README.md)
-[logo]: ../_ims/logo.png
+[logo]: ../_imgs/logo.png
 [ChangeLog]: (https://github.com/nearform/nscale/blob/master/CHANGELOG.md)
 [SemVer]: (http://semver.org/)
