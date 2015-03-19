@@ -39,6 +39,11 @@ source ~/.profile
 
 now check that it works by entering `nvm` in the terminal. You may need to restart your terminal.
 
+now install a version of node using `nvm install`
+```bash
+nvm install v0.10.35
+```
+
 Check that node is installed:
 ```bash
 node --version
