@@ -1,5 +1,4 @@
-
-<a href='http://nscale.nearform.com'>![nscale](./_imgs/logo.png)</a>
+<a href='http://nscale.nearform.com'>![logo][]</a>
 
 > _A toolkit for application deployments and container management_
 
@@ -48,3 +47,5 @@ This repository contains documentation and guides relating to the setup and usag
 Copyright (c) 2014 Nearform and other contributors
 
 Licensed under the Artistic License 2.0
+
+[logo]:./_imgs/logo.png

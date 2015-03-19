@@ -1,4 +1,4 @@
-<a href='http://nscale.neaarform.com'>![logo][]<a>
+<a href='http://nscale.nearform.com'>![logo][]</a>
 
 [Back To - Home](../README.md)
 

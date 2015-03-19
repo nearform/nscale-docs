@@ -1,4 +1,4 @@
-<a href='http:nscale.nearform.com'>![logo][]<a>
+<a href='http://nscale.nearform.com'>![logo][]</a>
 
 Direct deployment on Digital Ocean
 ==================================

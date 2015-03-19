@@ -1,4 +1,5 @@
-<a href='http:nscale.nearform.com'>![logo][]<a>
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 
 # Installing Node
 It seems one of the most common ways of installing node is by adding a ppa and using a distro package manager such as apt-get. This usually leads to installing node globally, which will require using `sudo` for most npm commands - This is [not a great idea.][sudo-bad-idea] Hands up if you're guilty.

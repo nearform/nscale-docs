@@ -1,5 +1,4 @@
-<a href='http:nscale.nearform.com'>![logo][]<a>
-
+<a href='http://nscale.nearform.com'>![logo][]</a>
 Check and fix
 =============
 [Previous](./5-update-&-rollback.md) | [Next](./7-using-docker-images.md) | [Home](./)
