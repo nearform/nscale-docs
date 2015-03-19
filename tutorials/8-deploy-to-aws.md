@@ -30,7 +30,7 @@ close the ssh connection with your instance with ```exit``` and reconnect.
 
 	`$sudo apt-get install build-essential`
 
-* Check out our [document](./install-node.md) which outlines our favourite ways of installing node.
+* Check out our [document](../setup-guides/install-node.md) which outlines our favourite ways of installing node.
 
 * Install git and configure:
     * git config --global user.name "your name"
