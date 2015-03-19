@@ -1,3 +1,5 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 Deploying on AWS
 ================
 [Previous](./7-using-docker-images.md) | [Home](./)
@@ -45,7 +47,7 @@ host *
 ```
 This allows the remote instance to use your local ssh key for cloning Github repos. You may need to log out and back in to see the effect of this.
 
-Once the above dependencies have been met you can proceed to install nscale using 
+Once the above dependencies have been met you can proceed to install nscale using
 ```bash
 $npm install -g nscale
 ```
@@ -65,7 +67,7 @@ A base AMI configured for management by nscale should be created. We can just cr
 * Image > Create Image.
 * Follow the steps provided.
 
-See [here.](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.   
+See [here.](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
 
 Once the server has been imaged, make a note of the ami identifier and log back into the running management system.
 
@@ -85,7 +87,7 @@ In order to operate correctly on AWS the nscale coniguration file (~/.nscale/con
   * Containers section
     * add aws-elb-container - specifiy the default subnet and vpc ID
     * add aws-sg-container - specifiy the default subnet and vpc ID
-    * add aws-ami-container - specifiy the default subnet and vpc ID and also the ami id 
+    * add aws-ami-container - specifiy the default subnet and vpc ID and also the ami id
 
 A full AWS confiuration file should look similar to the following:
 
@@ -225,14 +227,14 @@ nscale container list sudc
 ```
 You should see the following containers:
 ```bash
-awsWebElb            aws-elb              awsWebElb                                         
-awsWebSg             aws-sg               awsWebSg                                          
-demo2                aws-ami              awsMachine                                        
-doc                  process              doc$77c4014bef47deb4fef3af579f2959457c058ce8      
-hist                 process              hist$39f0c71b89f3ba78064468c0af79017927f1a6cb     
-real                 process              real$5309ad7aeba319fd44adb18bbc983f4587f16af9     
-web                  process              web$e2021682ad1d25287321a4883535252ba684d9ba      
-root                 blank-container      root 
+awsWebElb            aws-elb              awsWebElb
+awsWebSg             aws-sg               awsWebSg
+demo2                aws-ami              awsMachine
+doc                  process              doc$77c4014bef47deb4fef3af579f2959457c058ce8
+hist                 process              hist$39f0c71b89f3ba78064468c0af79017927f1a6cb
+real                 process              real$5309ad7aeba319fd44adb18bbc983f4587f16af9
+web                  process              web$e2021682ad1d25287321a4883535252ba684d9ba
+root                 blank-container      root
 ```
 ####Build the system
 Let's go ahead and build the containers ready for deployment:
@@ -249,7 +251,7 @@ Alternatively, you can build all the containers by themselves:
 After those have all completed we should have four containers ready for deployment.
 
 ####Deploy the system
-Now that we have an AWS system definintion and a set of containers to deploy, we can go ahead and push our system out onto AWS. 
+Now that we have an AWS system definintion and a set of containers to deploy, we can go ahead and push our system out onto AWS.
 
 Lets first run a preview:
 ```bash
@@ -285,10 +287,12 @@ This time nscale should report that the system is broked and present a remedial 
 ```bash
 nscale system fix sudc aws
 ```
-nscale will now boot up a replacement machine and deploy the appropriate containers to it, onece the fix has completed double check it by running:
+nscale will now boot up a replacement machine and deploy the appropriate containers to it, once the fix has completed double check it by running:
 ```bash
 nscale system check sudc aws
 ```
 Congratulations - you are now an nscale AWS ninja!
 
 [Previous](./7-using-docker-images.md) | [Home](./)
+
+[logo]:../_imgs/logo.png

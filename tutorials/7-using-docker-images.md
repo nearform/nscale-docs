@@ -1,3 +1,5 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 Use an image from Docker Hub
 ==================================
 [Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md) | [Home](./)
@@ -52,7 +54,7 @@ exports.root = {
 //         exec: ''
 //       }
 //     }
-// }; 
+// };
 ```
 
 To begin defining our system, we need to change it to:
@@ -139,7 +141,7 @@ $ nscale rev deploy registry 15dff development
 
 Our container should be running just fine, we can use the following to see it in action:
 
-OS X : 
+OS X :
 ```bash
 $ redis-cli -h `boot2docker ip`
 ```
@@ -149,9 +151,11 @@ Linux:
 $ redis-cli
 ```
 you may need to install redis-tools
-  
+
 ```bash
 sudo apt-get install redis-tools
 ```
 
 [Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md) | [Home](./)
+
+[logo]: ../_imgs/logo.png

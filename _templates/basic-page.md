@@ -1,6 +1,4 @@
-
-![logo][]
-
+<a href='http://nscale.nearform.com'>![logo][]<a><a href='http://nscale.nearform.com'>![logo][]</a>
 [Back To - Home][]
 
 # Your Section - Your Title
@@ -13,5 +11,6 @@ Your content here...
 
 [Back To - Home][]
 
-[logo]: ../_imgs/logo.png
+
 [Back To - Home]: ../README.md
+[logo]: ../_imgs/logo.png

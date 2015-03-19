@@ -1,6 +1,8 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 Configuration & Logs
 ============
-[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./) 
+[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./)
 
 This tutorial covers:
 
@@ -54,9 +56,9 @@ The analysis module implements the logic that queries a running system for compa
 
 The containers section defines the following:
 
-	containers - list of container types the kernel will import. 
-  This list can be extended to import various aws containers. 
-  Support for other platforms may come in the future. 
+	containers - list of container types the kernel will import.
+  This list can be extended to import various aws containers.
+  Support for other platforms may come in the future.
 
 ```js
 "containers": [
@@ -90,4 +92,6 @@ nscale server logs api.log
 nscale server logs web.log
 ```
 
-[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./) 
+[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./)
+
+[logo]: ../_imgs/logo.png

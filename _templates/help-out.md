@@ -1,5 +1,4 @@
-
-![logo][]
+<a href='http://nscale.nearform.com'>![logo][]</a>
 
 [Back To - Home][]
 
@@ -17,5 +16,6 @@ included a quick guide to adding to this repo. Have fun!
 
 [Back To - Home][]
 
-[logo]: ../_imgs/logo.png
+
 [Back To - Home]: ../README.md
+[logo]: ../_imgs/logo.png

@@ -1,3 +1,5 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 A Larger Application
 =======================
 [Previous](./2-create-a-system.md) | [Next](./4-config-&-logs.md) | [Home](./)
@@ -30,14 +32,14 @@ nscale container list sudc
 You should see the following containers:
 
 ```bash
-Name                 Type                 Id                                                
-awsWebElb            aws-elb              awsWebElb                                         
-awsWebSg             aws-sg               awsWebSg                                          
-demo2                aws-ami              awsMachine                                        
-doc                  process              doc$77c4014bef47deb4fef3af579f2959457c058ce8      
-hist                 process              hist$39f0c71b89f3ba78064468c0af79017927f1a6cb     
-real                 process              real$5309ad7aeba319fd44adb18bbc983f4587f16af9     
-web                  process              web$e2021682ad1d25287321a4883535252ba684d9ba      
+Name                 Type                 Id
+awsWebElb            aws-elb              awsWebElb
+awsWebSg             aws-sg               awsWebSg
+demo2                aws-ami              awsMachine
+doc                  process              doc$77c4014bef47deb4fef3af579f2959457c058ce8
+hist                 process              hist$39f0c71b89f3ba78064468c0af79017927f1a6cb
+real                 process              real$5309ad7aeba319fd44adb18bbc983f4587f16af9
+web                  process              web$e2021682ad1d25287321a4883535252ba684d9ba
 root                 blank-container      root
 ```
 
@@ -167,6 +169,8 @@ open http://$(boot2docker ip):8000
 
 Linux:
 open [localhost:8000](http://localhost:8000)
-	
+
 
 [Previous](./2-create-a-system.md) | [Next](./4-config-&-logs.md) | [Home](./)
+
+[logo]: ../_imgs/logo.png

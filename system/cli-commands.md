@@ -1,5 +1,4 @@
-
-![logo][]
+<a href='http://nscale.nearform.com'>![logo][]</a>
 [Back To - Home][]
 
 # System - CLI Commands
@@ -129,5 +128,6 @@ Get a timeline for a given system.
 
 [Back To - Home][]
 
-[logo]: ../_imgs/logo.png
+
 [Back To - Home]: ../README.md
+[logo]: ../_imgs/logo.png

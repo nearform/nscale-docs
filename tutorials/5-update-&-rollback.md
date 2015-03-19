@@ -1,3 +1,5 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 Update & Rollback
 ========
 [Previous](./4-config-&-logs.md) | [Next](./6-system-fix.md) | [Home](./)
@@ -10,8 +12,8 @@ This tutorial covers:
 
 Before Making any Changes
 -----------------
-cd into the sudc/workspace/sudc-web directory and run a git branch command. 
-If the HEAD is detached, then do 
+cd into the sudc/workspace/sudc-web directory and run a git branch command.
+If the HEAD is detached, then do
 ```bash
 git checkout master
 ```
@@ -31,7 +33,7 @@ initialize: function () {
 ```
 
 **cd into the sudc/workspace/sudc-web directory**, stage the changes and commit:
-```bash	
+```bash
 git add .
 git commit -m "Added buggy alert"
 ```
@@ -54,7 +56,7 @@ open [localhost:8000](http://localhost:8000)
 ![image](./img/bugalert.png)
 
 It is this workflow which allows us to makes changes and deploy them using nscale:
-	
+
 	- Make changes in code
 	- Commit
 	- (optional) push to Github
@@ -77,7 +79,7 @@ nscale revision deploy sudc <revision id> development
 ```
 
 Check the site is working:
-    
+
 OS X:
 open http://$(boot2docker ip):8000
 
@@ -91,12 +93,12 @@ The output from the deployment of the second revision id looks like this:
 ```bash
 --> deploying...
 --> deploying plan...
-unlink web-5a16c094$bdbd43a868dba8a8932e091ed357f00511b7c127 
+unlink web-5a16c094$bdbd43a868dba8a8932e091ed357f00511b7c127
 unlinking
-stop web-5a16c094$bdbd43a868dba8a8932e091ed357f00511b7c127 
+stop web-5a16c094$bdbd43a868dba8a8932e091ed357f00511b7c127
 stopping
 a0780f95d74c3d8c754f0f77992e42bf170d149c0e8ff3e3fe68e7fb68be4e46
-remove web-5a16c094$bdbd43a868dba8a8932e091ed357f00511b7c127 
+remove web-5a16c094$bdbd43a868dba8a8932e091ed357f00511b7c127
 undeploying
 add web-5a16c094$e2021682ad1d25287321a4883535252ba684d9ba docker
 deploying
@@ -132,9 +134,9 @@ Roll forward the change:
 nscale system compile sudc development
 nscale container build sudc web latest development
 nscale revision deploy sudc latest development
-```	
+```
 Check the site is working:
-    
+
 OS X:
 open http://$(boot2docker ip):8000
 
@@ -142,3 +144,5 @@ Linux:
 open [localhost:8000](http://localhost:8000)
 
 [Previous](./4-config-&-logs.md) | [Next](./6-system-fix.md) | [Home](./)
+
+[logo]: ../_imgs/logo.png

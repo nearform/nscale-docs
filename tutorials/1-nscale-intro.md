@@ -1,6 +1,8 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 NScale Intro
 ============
-[Previous](./docker-intro.md) | [Next](./2-create-a-system.md) | [Home](./) 
+[Previous](./docker-intro.md) | [Next](./2-create-a-system.md) | [Home](./)
 
 This tutorial covers:
 
@@ -12,7 +14,7 @@ This tutorial covers:
 What is nscale?
 ---------------
 
-![image](./img/logo.png)
+
 
 `nscale` is an open source deployment management toolkit. After working on several microservice projects, we found there was a need to formalize a process for deploying microservice based systems so we could stop reinventing the wheel for each new project.
 
@@ -155,13 +157,13 @@ We should see from the configuration that nscale keeps its data in ~/.nscale/dat
 
 Now lets look at the nscaledemo repository. It contains the following files:
 ```bash
-├── README.md 
+├── README.md
 ├── definitions
 │   └── services.js
 └── system.js
 ```
 #### definitions/services.js
-services.js contains some javascript that defines the two containers. 
+services.js contains some javascript that defines the two containers.
 ```js
 exports.root = {
   type: 'blank-container'
@@ -211,17 +213,17 @@ nscale container list nscaledemo
 ```
 We should see output similar to the following:
 ```bash
-Name                 Type            Id                                                 
-root                 blank-container 85d99b2c-06d0-5485-9501-4d4ed429799c                               
-web                  docker          9ddc6c027-9ce2-5fdg-9936-696d2b3789bb             
+Name                 Type            Id
+root                 blank-container 85d99b2c-06d0-5485-9501-4d4ed429799c
+web                  docker          9ddc6c027-9ce2-5fdg-9936-696d2b3789bb
 ```
 There are two containers definitions: a blank root container and a docker container. Let's take a look at the revision history:
 ```bash
 nscale revision list
 ```
-We should see a list of system revisions for the current system along with their IDs. 
-* With every compile, nscale syncs up with the latest code commits in your various repos. 
-* This creates an immutable system revision which can be deployed. 
+We should see a list of system revisions for the current system along with their IDs.
+* With every compile, nscale syncs up with the latest code commits in your various repos.
+* This creates an immutable system revision which can be deployed.
 * We can use these revisions to roll an entire system back to a particular state with ease.
 
 Once the system is compiled, we can build its containers using the latest code commits.
@@ -274,4 +276,6 @@ Stop the running docker container before moving on to the next exercise.
 docker ps
 docker stop <container id>
 ```
-[Previous](./docker-intro.md) | [Next](./2-create-a-system.md) | [Home](./) 
+[Previous](./docker-intro.md) | [Next](./2-create-a-system.md) | [Home](./)
+
+[logo]:../_imgs/logo.png

@@ -1,7 +1,7 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 nscale Tutorials
 ===============
-
-![image](./img/logo.png)
 
 ##Preliminary
 - [Docker Introduction](./docker-intro.md)
@@ -22,3 +22,5 @@ nscale Tutorials
 - [Development Workflow Examples](./development-workflow.md)
 
 [do-referral]: https://www.digitalocean.com/?refcode=c85081546a8e
+
+[logo]:../_imgs/logo.png

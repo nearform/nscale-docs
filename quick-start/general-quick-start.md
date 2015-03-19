@@ -1,5 +1,4 @@
-
-![nscale](../_imgs/logo.png)
+<a href='http://nscale.nearform.com'>![logo][]</a>
 
 [Back To - Home](../README.md)
 
@@ -220,8 +219,9 @@ open http://`boot2docker ip`:8000
 If you are interested in learning more about nscale try the nscale [tutorials](../tutorials/README.md)
 
 <br/>
-[Back To - Home](../README.md)
 
+[Back To - Home](../README.md)
+[logo]: ../_imgs/logo.png
 [Linux Setup Guide]: Linux-Setup-Guide
 [Getting Started From Scratch]: Getting-Started-From-Scratch
 [Getting Started Migrating]: Getting-Started-Migrating

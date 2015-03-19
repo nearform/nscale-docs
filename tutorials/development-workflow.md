@@ -1,6 +1,8 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 Development Workflow
 ====================
-[Tutorials Home](./) 
+[Tutorials Home](./)
 
 Can we use nScale during the development workflow? Yes, with
 process-containers!
@@ -65,6 +67,7 @@ initialize: function () {
     // Your code here
     alert('Hello World!');
 }
+````
 
 **cd into the sudc/workspace/sudc-web directory**, stage the changes and commit:
 ```bash
@@ -388,3 +391,5 @@ If you change your `server.js`, you will see it is automatically
 reloaded!
 
 [Tutorials Home](./)
+
+[logo]:../_imgs/logo.png

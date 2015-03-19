@@ -1,6 +1,8 @@
+<a href='http://nscale.nearform.com'>![logo][]</a>
+
 Direct deployment on Digital Ocean
 ==================================
-[Tutorials Home](./) 
+[Tutorials Home](./)
 
 Since version 0.9 nscale supports _any cloud provider that give SSH
 access_, plus bare-metal deployments.
@@ -206,3 +208,5 @@ https://github.com/nearform/sudc-system/tree/direct
 [doreferral]: https://www.digitalocean.com/?refcode=c85081546a8e
 
 [Tutorials Home](./)
+
+[logo]:../_imgs/logo.png
