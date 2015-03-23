@@ -14,11 +14,13 @@ During this tutorial we will assume deployment onto a linux based AMI. Specifica
 
 ##nscale on AWS
 to use nscale in AWS we need two things:
+
 1. An nscale management server which will manage deployments.
-2. A custom AMI with docker installed - We use this image for deploying our apps.
+2. A custom AMI with docker installed - We will use this image for deploying our apps.
+
 Because setting up nscale requires installing docker, we will make a custom AMI based off the nscale management server.
 
-##Install Docker
+##Install Docker on a Fresh Instance
 * boot up a community base VM. Do this using the ubuntu [EC2 AMI locator](http://cloud-images.ubuntu.com/locator/ec2/). We recommend using a 64-bit Trusty image.
 
 * connect to your newly booted VM and install docker as per the instructions [here](http://docs.docker.com/installation/ubuntulinux/)
@@ -31,7 +33,7 @@ For these changes to come into effect you usually need to log out and log back i
 close the ssh connection with your instance with ```exit``` and reconnect.
 
 ##Create a Base Image
-Before we continue with our installation of nscale, we will create an image based off our instance. This will be the base image used for deploying the app. An easy way to do this is through the EC2 Dashboard:
+Before we continue to install nscale, we will create an image based off our instance. This will be the base image used for deploying the app. An easy way to do this is through the EC2 Dashboard:
 
 * Find the instance you've just set up and right click.
 * Image > Create Image.
@@ -54,7 +56,7 @@ Once the server has been imaged, make a note of the ami identifier and log back 
     * git config --global user.email "you@somewhere.com"
 
 ##Enable SSH Agent Forwarding
-create a file `config` in the ~/.ssh folder on your local machine and insert the following:
+create a file `config` in the ~/.ssh folder on your __local machine__ and insert the following:
 ```
 host *
  ForwardAgent yes
@@ -186,20 +188,20 @@ nscale will no go ahead and deploy the SUDC system into your infrastructure. The
 * deploy front end container to one of the machine instances and start it
 * deploy 3 service containers to the other machine instnace and start them
 
-Deployment may take several minutes depending on AWS machine instance spin up time. Once complete you should be able to point a web browser at port 8000 on the front end instance and view the startup death clock front end.
+Deployment may take several minutes depending on AWS machine instance spin up time. Once complete you should be able to point a web browser to the DNS name of the load balancer or to port 8000 on the front end instance and view the startup death clock front end.
 
 ##Check and Fix on AWS
 Now that we have a deployed working system on AWS, lets just check that everything is in order by running an nscale check:
 ```bash
 nscale system check sudc aws
 ```
-The check command will run an analysis against the deployed system and compare it to your desired system configuration. This may take a few moments to run, but nscale should now respond that all is well with your deployment. Lets break something!
+The check command will run an analysis against the deployed system and compare it to your desired system configuration. This may take a few moments to run, but nscale should now respond that all is well with your deployment. Let's break something!
 
 Go into the AWS management console and kill the SUDC front end machine. Now run the check again on the management host:
 ```bash
 nscale system check sudc aws
 ```
-This time nscale should report that the system is broked and present a remedial action plan. To go ahead and fix the system execute:
+nscale should report that the system is broken and present a remedial action plan. To fix the system execute:
 ```bash
 nscale system fix sudc aws
 ```
