@@ -8,7 +8,6 @@ This tutorial covers:
 
 1. Deploying a larger application
 2. Previewing before deploying
-2. The nscale web gui
 
 Clone the Application
 ---------------------
@@ -92,7 +91,7 @@ revision             deployed     who                                      time 
 
 Next let's preview what a deploy of the latest build would look like by previewing the revision id from the top of the revision list:
 ```bash
-nscale revision preview sudc <revision id> <environment>
+nscale revision preview sudc <revision id> <target>
 ```
 
 So, we can preview our latest commit with:

@@ -1,23 +1,27 @@
 <a href='http://nscale.nearform.com'>![logo][]</a>
 
-Deploying on AWS
-================
+#Deploying on AWS
 [Previous](./7-using-docker-images.md) | [Home](./)
 
 This tutorial covers:
 
-1. Installing nscale on an EC2 instance
-2. AWS configuration file updates
+1. Creating an nscale management server.
+2. Making AWS specific configurations.
 3. Deployment into AWS
-4. Check and fix on AWS
+4. System check and fix on AWS
 
 During this tutorial we will assume deployment onto a linux based AMI. Specifically we assume use of ubuntu as the base operating system.
 
-Installing nscale on AWS
-------------------------
-nscale should be installed on AWS in a similar manner to a direct linux install:
+##nscale on AWS
+to use nscale in AWS we need two things:
 
-* boot up a community base VM. Do this using the ubuntu [EC2 AMI locator](http://cloud-images.ubuntu.com/locator/ec2/). We recommend using a 64 bit Trusty image.
+1. An nscale management server which will manage deployments.
+2. A custom AMI with docker installed - We will use this image for deploying our apps.
+
+Because setting up nscale requires installing docker, we will make a custom AMI based off the nscale management server.
+
+##Install Docker on a Fresh Instance
+* boot up a community base VM. Do this using the ubuntu [EC2 AMI locator](http://cloud-images.ubuntu.com/locator/ec2/). We recommend using a 64-bit Trusty image.
 
 * connect to your newly booted VM and install docker as per the instructions [here](http://docs.docker.com/installation/ubuntulinux/)
 
@@ -28,19 +32,31 @@ $sudo usermod -G docker -a $(whoami)
 For these changes to come into effect you usually need to log out and log back in.
 close the ssh connection with your instance with ```exit``` and reconnect.
 
+##Create a Base Image
+Before we continue to install nscale, we will create an image based off our instance. This will be the base image used for deploying the app. An easy way to do this is through the EC2 Dashboard:
+
+* Find the instance you've just set up and right click.
+* Image > Create Image.
+* Follow the steps provided.
+
+See [here.](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
+
+Once the server has been imaged, make a note of the ami identifier and log back into the running management system.
+
+##Install Node
 * It is recommended you install the build-essentials package. Many default AMIs do not come with packages such as make and g++. This will ensure you have the packages required for some npm modules to work. Failing to do so may lead to problems installing nscale depending on the AMI you launched.
 
 	`$sudo apt-get install build-essential`
 
 * Check out our [document](../setup-guides/install-node.md) which outlines our favourite ways of installing node.
 
+##Install Git
 * Install git and configure:
     * git config --global user.name "your name"
     * git config --global user.email "you@somewhere.com"
 
-Enable SSH Agent Forwarding
-----------------------------
-create a file `config` in the ~/.ssh folder on your local machine and insert the following:
+##Enable SSH Agent Forwarding
+create a file `config` in the ~/.ssh folder on your __local machine__ and insert the following:
 ```
 host *
  ForwardAgent yes
@@ -51,145 +67,27 @@ Once the above dependencies have been met you can proceed to install nscale usin
 ```bash
 $npm install -g nscale
 ```
-
-Lastly you must copy the private key file used for connecting to the instance onto the instance itself.
+Lastly you must copy the private key file originally used for connecting to the instance onto the instance itself.
 The private key will be used by nscale for connecting to other remote instances it creates.
 
-Recommended
-----------------------
+##Recommended
 To make life easier, there is a powerful tool called SSHFS which allows you to mount a remote file system locally via ssh. This lets you view files on your remote instance in your file browser and you'll be able to edit them using graphical editors. Check out the guide to using it [here](http://www.emreakkas.com/linux-tips/how-to-mount-amazon-ec2-drive-locally-fuse-sshfs)
 
-Configuring AMIs for use with nscale
-------------------------------------
-A base AMI configured for management by nscale should be created. We can just create a reusable image based off our newly configured instance as per above. An easy way to do this is through the EC2 Dashboard:
-
-* Find the instance you've just set up and right click.
-* Image > Create Image.
-* Follow the steps provided.
-
-See [here.](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
-
-Once the server has been imaged, make a note of the ami identifier and log back into the running management system.
-
-AWS configuration file updates
-------------------------------
-In order to operate correctly on AWS the nscale coniguration file (~/.nscale/config/config.json) requires some additional parameters. These are as follows:
-
-* Kernel section
-  * user - the username to use when connecting to remove systems (ubuntu)
-  * identityFile - the full path to the ssh key file required to connect to remote systmes
-  * region - the AWS region you are using
-  * accessKeyId - your AWS API access key
-  * secretAccessKey- your AWS secret access key
-* Modules section
-  * analysis section
-    * set the analyzer to - nscale-aws-analyzer
-  * Containers section
-    * add aws-elb-container - specifiy the default subnet and vpc ID
-    * add aws-sg-container - specifiy the default subnet and vpc ID
-    * add aws-ami-container - specifiy the default subnet and vpc ID and also the ami id
-
-A full AWS confiuration file should look similar to the following:
-
-```js
-{
-  "kernel": {
-    "port": "8010",
-    "root": "/home/ubuntu/.nscale",
-    "user": "ubuntu",
-    "identityFile": "FULL_PATH_TO_YOUR_KEY.pem",
-    "region": "us-west-2",
-    "accessKeyId": "XXXXXXXXXXXXXXXXX",
-    "secretAccessKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-  },
-  "api": {
-  },
-  "web": {
-  },
-  "modules": {
-    "protocol": {
-      "require": "nscale-protocol",
-      "specific": {
-      }
-    },
-    "authorization": {
-      "require": "nscale-noauth",
-      "specific": {
-        "credentialsPath": "/home/ubuntu/.nscale/data"
-      }
-    },
-    "analysis": {
-      "require": "nscale-aws-analyzer",
-      "specific": {
-      }
-    }
-  },
-  "containers": [{
-    "require": "aws-elb-container",
-    "type": "aws-elb",
-    "specific": {
-      "region": "us-west-2",
-      "defaultSubnetId": "subnet-xxxxxxxx",
-      "defaultVpcId": "vpc-xxxxxxxx"
-      }
-  },
-  {
-    "require": "aws-sg-container",
-    "type": "aws-sg",
-      "specific": {
-      "region": "us-west-2",
-      "defaultSubnetId": "subnet-xxxxxxxx",
-      "defaultVpcId": "vpc-xxxxxxxx"
-    }
-  },
-  {
-    "require": "aws-ami-container",
-    "type": "aws-ami",
-    "specific": {
-      "region": "us-west-2",
-      "defaultImageId": "ami-xxxxxxxx",
-      "defaultSubnetId": "subnet-xxxxxxxx",
-      "defaultVpcId": "vpc-xxxxxxxx"
-    }
-  },
-  {
-    "require": "blank-container",
-    "type": "blank-container",
-    "specific": {}
-  },
-  {
-    "require": "docker-container",
-    "type": "docker",
-    "specific": {
-      "imageCachePath": "/tmp"
-    }
-  },
-  {
-    "require": "process-container",
-    "type": "process",
-    "specific": {}
-  }]
-}
-```
-
-Deploying into AWS
-------------------
-Now that we have configured our AWS setup lets proceed to deploy a system into AWS. To do this we will clone and deploy the startup death clock.
-
-Lets get started by cloning the repository onto our AWS management system. Firstly cd into a working folder lets say /home/ubuntu/work/sudc.
+##Deploying into AWS
+Let's get started by cloning the `sudc-system` repository onto our AWS management system. 
 ```bash
 git clone git@github.com:nearform/sudc-system.git
 nscale system link sudc-system
 ```
 ####Infrastructure
-nscale compiles from all .js files under the services folder so we can logically organise our container definitions any way we want.
-The aws specific definitions are in the awsInfrastructure.js file
+nscale compiles from all .js files under the definitions folder so we can logically organise our container definitions any way we want.
+The aws specific definitions are stored in `definitions/awsInfrastructure.js`
 
 it defines three containers:
 
- * awsWebElb - elastic load balancer definition
- * awsWebSg - security group definition
- * awsMachine - base AMI definition
+ * awsWebElb - An elastic load balancer definition
+ * awsWebSg - A security group definition
+ * awsMachine - A base AMI definition
 
 ####Topology
 in system.js we can define as many topologies as we want. Each topology is given its own target name e.g. development, process or aws. The aws topology is as follows:
@@ -203,16 +101,37 @@ in system.js we can define as many topologies as we want. Each topology is given
   },
 ```
 
-The topology section defines how the service containers are distributed amongst machine instances.
+The topology section defines how the service containers are distributed amongst machine instances. In this case we have a load balancer which has one security group associated with it. The security group has two associated machines: The sudc web container will be running in the first. The doc, hist, and real containers will be running in the second machine.
 
-####Edit
-In order to make this work we need to make some minor adjustments to the ids specified in the ```awsInfrastructure.js``` file:
+####Configure
+In order to get up and running we need to make some configurations. As of v0.15 this has never been so easy! Firstly we need to make our AWS specific configurations. Open `config.example.js` 
 
-Open the file definitions/awsInfrastructure
-  * under awsWebElb change the AvailabilityZone setting to match your availability zone
-  * under awsWebSg change the VpcId setting to match your VPC
-  * under awsMachine change the ImageId to match your ami id
+```js
+module.exports = {
+  region: 'us-west-2',
+  identityFile: 'key.pem',
+  accessKeyId: 'YOUR_KEY_HERE',
+  secretAccessKey: 'YOUR_SECRET_HERE',
+  user: 'ubuntu',
+  defaultSubnetId: 'subnet-xxxxxxxx',
+  defaultVpcId: 'vpc-xxxxxxxx',
+  defaultImageId: 'ami-xxxxxxxx',
+  defaultInstanceType: 't2.medium'
+};
+```
 
+You need to fill in your information here:
+* region - the region your nscale management server is located
+* identityFile - The path to the key file you copied onto the management server
+* accessKeyId - Your AWS Access Key ID
+* secretAccessKey - Your AWS Secret Access Key
+* user - The default username on the machine instances
+* defaultSubnetId - The subnet your management server is located in
+* defaultVpcId - The virtual private cloud your subnet is located in
+* defaultImageId - The image to be used when provisioning machines. Use the custom AMI you created
+* defaultInstanceType - The type of instance to be provisioned. You can use t2.micro if you like.
+
+Save the file as `config.js`
 
 
 ####Compile
@@ -269,21 +188,20 @@ nscale will no go ahead and deploy the SUDC system into your infrastructure. The
 * deploy front end container to one of the machine instances and start it
 * deploy 3 service containers to the other machine instnace and start them
 
-Deployment may take several minutes depending on AWS machine instance spin up time. Once complete you should be able to point a web browser at port 8000 on the front end instance and view the startup death clock front end.
+Deployment may take several minutes depending on AWS machine instance spin up time. Once complete you should be able to point a web browser to the DNS name of the load balancer or to port 8000 on the front end instance and view the startup death clock front end.
 
-Check and Fix on AWS
---------------------
+##Check and Fix on AWS
 Now that we have a deployed working system on AWS, lets just check that everything is in order by running an nscale check:
 ```bash
 nscale system check sudc aws
 ```
-The check command will run an analysis against the deployed system and compare it to your desired system configuration. This may take a few moments to run, but nscale should now respond that all is well with your deployment. Lets break something!
+The check command will run an analysis against the deployed system and compare it to your desired system configuration. This may take a few moments to run, but nscale should now respond that all is well with your deployment. Let's break something!
 
 Go into the AWS management console and kill the SUDC front end machine. Now run the check again on the management host:
 ```bash
 nscale system check sudc aws
 ```
-This time nscale should report that the system is broked and present a remedial action plan. To go ahead and fix the system execute:
+nscale should report that the system is broken and present a remedial action plan. To fix the system execute:
 ```bash
 nscale system fix sudc aws
 ```

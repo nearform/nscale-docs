@@ -48,21 +48,25 @@ directory. Go ahead and have a look at the files in there.
 $ cd workshop
 $ tree # you may not have tree installed
 .
+├── config.example.js
 ├── definitions
 │   └── services.js
+├── README.md
 └── system.js
+
 ```
 
 1 directory, 4 files
 
-There are two main files there:
+There are 3 main files there:
 
 1. `system.js` is the _source of knowledge_ of a system managed by
    nscale.
 2. `definitions/services.js` contains the definitions on how to build
    our containers.
+3. `config.example.js` is a project specific configuration file which can be used to store things such as AWS credentials or paths to keyfiles.
 
-We will edit both shortly.
+We will edit the first two shortly.
 
 Preparing the Application
 -------------------------
