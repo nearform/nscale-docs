@@ -42,13 +42,13 @@ cd sudc-system
 nscale sys link .
 ```
 
-The system will be set up for local development by issuing:
+Compile the system:
 
 ```bash
 nscale sys compile
 ```
 
-Then, to download and install dependencies, launch:
+Then build the process containers - In this case the dependencies are downloaded and installed on your machine:
 
 ```bash
 nscale cont buildall latest process
