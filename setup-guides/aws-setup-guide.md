@@ -72,6 +72,8 @@ The private key will be used by nscale for connecting to other remote instances 
 scp my-key.pem my-key.pem ubuntu@56.49.82.188:~/
 ```
 
+-This should have you set up and ready to use nscale in AWS. To see an example of deploying to AWS, see the [AWS tutorial](../tutorials/8-deploy-to-aws.md)
+
 [logo]: ../_imgs/logo.png
 [AWS-signup]: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=h_ct
 [generate-ssh-key]: https://help.github.com/articles/generating-ssh-keys/
