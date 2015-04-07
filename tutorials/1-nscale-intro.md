@@ -195,7 +195,7 @@ exports.topology = {
 };
 
 ```
-nscale 'compiles' containers defined under the definitions folder along with information in system.js into a full system definition. The result of this compilation process is help in development.json. Lets run a compile now:
+nscale 'compiles' containers defined under the definitions folder along with information in system.js into a full system definition. The result of this compilation process is held in development.json. Lets run a compile now:
 ```bash
 nscale system compile nscaledemo
 ```
