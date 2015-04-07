@@ -66,7 +66,7 @@ After those have all completed we should have four containers ready for deployme
 
 Previewing the deployment
 -------------------------
-Before we deploy the system let's take a look at the commands that will be executed on deployment. Fist we can check the revision list:
+Before we deploy the system let's take a look at the commands that will be executed on deployment. First we can check the revision list:
 ```bash
 nscale revision list sudc
 ```
