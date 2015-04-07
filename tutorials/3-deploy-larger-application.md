@@ -11,7 +11,7 @@ This tutorial covers:
 
 Clone the Application
 ---------------------
-Lets get started by cloning the repository for a larger application by doing the following:
+Let's get started by cloning the repository for a larger application by doing the following:
 
 Pull down the code for the sudc-system:
 ```bash
