@@ -180,7 +180,7 @@ This will run an analysis against your configured AWS region and may take severa
 ```bash
 nscale revision deploy sudc latest aws
 ```
-nscale will no go ahead and deploy the SUDC system into your infrastructure. The following actions will be taken:
+nscale will now go ahead and deploy the SUDC system into your infrastructure. The following actions will be taken:
 
 * create a new load balancer awsWebElb
 * create a new security group awsWebSg
