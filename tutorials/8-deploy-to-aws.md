@@ -39,7 +39,7 @@ Before we continue to install nscale, we will create an image based off our inst
 * Image > Create Image.
 * Follow the steps provided.
 
-See [here.](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
+See [here](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
 
 Once the server has been imaged, make a note of the ami identifier and log back into the running management system.
 
