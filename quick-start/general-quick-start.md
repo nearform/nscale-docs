@@ -48,7 +48,7 @@ We understand that there exist other operating systems, however at this time we 
 
 ### Install node
 
-Check out our [document](./install-node.md) which outlines our favourite ways of installing node.
+Check out our [document](../setup-guides/install-node.md) which outlines our favourite ways of installing node.
 
 ### Install git
 nscale uses git as a backing store for system configuration and versioning. git can be installed using the package manager on your system of choice (i.e. homebrew on osx, apt-get on ubuntu...)
@@ -179,7 +179,7 @@ nscale container build nscaledemo web
 This command will create a docker container ready for nscale to start.
 
 #### Run the demo
-Before we run the system, take a quick look at the revsion list:
+Before we run the system, take a quick look at the revision list:
 
 ```sh
 nscale revision list nscaledemo

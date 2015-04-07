@@ -11,7 +11,7 @@ This tutorial covers:
 
 Clone the Application
 ---------------------
-Lets get started by cloning the repository for a larger application by doing the following:
+Let's get started by cloning the repository for a larger application by doing the following:
 
 Pull down the code for the sudc-system:
 ```bash
@@ -66,7 +66,7 @@ After those have all completed we should have four containers ready for deployme
 
 Previewing the deployment
 -------------------------
-Before we deploy the system let's take a look at the commands that will be executed on deployment. Fist we can check the revision list:
+Before we deploy the system let's take a look at the commands that will be executed on deployment. First we can check the revision list:
 ```bash
 nscale revision list sudc
 ```
@@ -161,7 +161,7 @@ Let's go ahead and run the deployment:
 ```bash
 nscale revision deploy sudc latest development
 ```
-`nscale` will now execute the deployment that we previewed in the last step. Once this completes we should have a running system composed of four docker containers. We van verify everything's working by pointing our browser to the docker host ip address port 8000 on Mac OS X or localhost on linux.
+`nscale` will now execute the deployment that we previewed in the last step. Once this completes we should have a running system composed of four docker containers. We can verify everything's working by pointing our browser to the docker host ip address port 8000 on Mac OS X or localhost on linux.
 
 OS X:
 open http://$(boot2docker ip):8000

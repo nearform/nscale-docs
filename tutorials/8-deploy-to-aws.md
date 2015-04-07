@@ -39,7 +39,7 @@ Before we continue to install nscale, we will create an image based off our inst
 * Image > Create Image.
 * Follow the steps provided.
 
-See [here.](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
+See [here](http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html) if you would prefer to use the AWS Command Line Interface tools.
 
 Once the server has been imaged, make a note of the ami identifier and log back into the running management system.
 
@@ -136,7 +136,7 @@ Save the file as `config.js`
 
 ####Compile
 
-Lets now go ahead and compile for aws
+Let's now go ahead and compile for aws
 ```bash
 nscale system compile sudc aws
 ```
@@ -172,15 +172,15 @@ After those have all completed we should have four containers ready for deployme
 ####Deploy the system
 Now that we have an AWS system definintion and a set of containers to deploy, we can go ahead and push our system out onto AWS.
 
-Lets first run a preview:
+Let's first run a preview:
 ```bash
 nscale revision preview sudc latest aws
 ```
-This will run an analysis against your configured AWS region and may take several seconds to complete. The preview should determine that a full deployment is required. nscale will show you a list of commands that will be executed against your infrastrcutre upon deployment. You should review this list to ensure that you are comfortable with the changes. If you are lets not go ahead and deploy.
+This will run an analysis against your configured AWS region and may take several seconds to complete. The preview should determine that a full deployment is required. nscale will show you a list of commands that will be executed against your infrastructure upon deployment. You should review this list to ensure that you are comfortable with the changes. If you are, let's now go ahead and deploy.
 ```bash
 nscale revision deploy sudc latest aws
 ```
-nscale will no go ahead and deploy the SUDC system into your infrastructure. The following actions will be taken:
+nscale will now go ahead and deploy the SUDC system into your infrastructure. The following actions will be taken:
 
 * create a new load balancer awsWebElb
 * create a new security group awsWebSg

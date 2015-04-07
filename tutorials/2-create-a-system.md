@@ -219,7 +219,7 @@ f75ff4f3b2ecdf378ad… development  Matteo Collina <hello@matteocollina.com> 201
 26490f52c61e020ffe0…              Matteo Collina <hello@matteocollina.com> 2015-01-23T15:41:16.000Z  first commit
 ```
 
-And then we can ask that revision `development.json`:
+And then we can ask for that revision's `development.json`:
 
 ```js
 $ nscale rev get f75ff dev # from the project folder
