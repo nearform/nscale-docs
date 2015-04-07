@@ -179,7 +179,7 @@ nscale container build nscaledemo web
 This command will create a docker container ready for nscale to start.
 
 #### Run the demo
-Before we run the system, take a quick look at the revsion list:
+Before we run the system, take a quick look at the revision list:
 
 ```sh
 nscale revision list nscaledemo
