@@ -1,9 +1,8 @@
 # nscale on startup
 
 starting with v0.16 it is now possible to configure Ubuntu to run the nscale-kernel on startup.
-- Simply paste the bash script below into a temporary file, let's say `~/nscale`
-- run `sudo cat ~/nscale > /etc/init.d/nscale`
-- run `sudo update-rc.d nscale default`
+- Create the file `/etc/init.d/nscale` and paste the script below. _You need sudo privileges_
+- Run `sudo sed -i "s/YourUserHere/$(whoami)/" /etc/init.d/nscale && sudo chmod +x /etc/init.d/nscale && sudo update-rc.d nscale defaults` 
 
 ### Check That It's Working
 - run `sudo service nscale restart`
@@ -23,7 +22,7 @@ You should see that nscale is running.
 # Description:       Enable service provided by daemon.
 ### END INIT INFO
 
-user="Your User Here"
+user="YourUserHere"
 cmd="nscale-kernel -c /home/$user/.nscale/config/config.json"
 name=`basename $0`
 pid_file="/home/$user/.nscale/data/.nscale-kernel"
