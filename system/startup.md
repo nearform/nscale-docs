@@ -5,7 +5,7 @@ starting with v0.16 it is now possible to configure Ubuntu to run the nscale-ker
 - Run `sudo sed -i "s/YourUserHere/$(whoami)/" /etc/init.d/nscale && sudo chmod +x /etc/init.d/nscale && sudo update-rc.d nscale defaults` 
 
 ### Check That It's Working
-- run `sudo service nscale restart`
+- run `service nscale restart`
 - run `nscale status`
 
 You should see that nscale is running.
