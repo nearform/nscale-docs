@@ -91,12 +91,12 @@ system check <sys>                    - run an analysis and check it against the
 To start the server we run:
 
 ```bash
-nscale server start
+nscale start
 ```
 
 To stop the server we run:
 ```bash
-nscale server stop
+nscale stop
 ```
 ### Setting credentials
 We need to tell `nscale` who you are:

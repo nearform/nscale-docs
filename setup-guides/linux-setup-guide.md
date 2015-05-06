@@ -48,8 +48,7 @@ sudo make prefix=/usr/local install
 
 ## Github
 
-nscale uses both git and Github extensively, in order for commands
-like `nscale system clone` to work. We need to have the git user name and
+nscale uses both git and Github extensively. We need to have the git user name and
 email set to our Github login and have `ssh-keys` set up with Github.
 
 To set our Github user and email we do:
