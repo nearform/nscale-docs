@@ -1,4 +1,4 @@
-<a href='http://nscale.nearform.com'>![logo][]<a><a href='http://nscale.nearform.com'>![logo][]</a>
+![logo][]
 [Back To - Home][]
 
 # Your Section - Your Title
