@@ -54,7 +54,8 @@ Then build the process containers - In this case the dependencies are downloaded
 nscale cont buildall latest process
 ```
 
-__If you are on Linux__, you should set up your machine to support a lot of files being watched:
+__If you are on Linux__, configuration is needed to support watching a large number of files:
+
 
 ```
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
