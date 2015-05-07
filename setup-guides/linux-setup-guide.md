@@ -117,6 +117,14 @@ nscale
 
 This should show the help output.
 
+## One Last Thing for Linux Users
+
+When making use of process containers for local development on Linux, configuration is needed to support watching a large number of files:
+
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 <br/>
 [Back To - Home](../README.md)
 [logo]: ../_imgs/logo.png
