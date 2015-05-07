@@ -1,4 +1,4 @@
-<a href='http://nscale.nearform.com'>![logo][]</a>
+![logo][]
 
 > _A toolkit for application deployments and container management_
 

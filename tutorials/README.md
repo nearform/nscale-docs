@@ -20,6 +20,7 @@ nscale Tutorials
 ##Extras
 - [Deploy directly via SSH to DigitalOcean](./direct-digitalocean.md)
 - [Development Workflow Examples](./development-workflow.md)
+- [Contribute to nscale](../contributing/README.md)
 
 [do-referral]: https://www.digitalocean.com/?refcode=c85081546a8e
 
