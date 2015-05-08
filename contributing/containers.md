@@ -47,7 +47,7 @@ Let's review:
 
 We need to remove the process-container located in the kernel and link up our one.
 
-1. From our newly cloned process container run:
+- From our newly cloned process container run:
 
 ```bash
 npm link
@@ -55,7 +55,8 @@ npm link
 
 _This creates a symbolic link to the process container module in your global node_modules folder._
 
-2. cd into the nscale-kernel directory and run the following:
+
+- cd into the nscale-kernel directory and run the following:
 
 ```bash
 rm -rf node_modules/process-container
