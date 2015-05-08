@@ -16,7 +16,7 @@ For the purposes of this guide, we will assume a development kernel is set up.
 
 ## Fork and Clone
 
-Head over to the [][nscale-client] repo and fork it.
+Head over to the ![nscale-client][] repo and fork it.
 
 clone your repo:
 
@@ -79,7 +79,7 @@ You are now ready to hack the nscale-client!
 
 To chat with the owners/contributors visit the [nscale gitter][gitter] page.
 
-If you make any improvements please check out our general guidelines for submitting us a [pull request.][pull-requests]
+If you make any improvements please check out our general guidelines for submitting a [pull request.][pull-requests]
 
 [Back To - Home][]
 

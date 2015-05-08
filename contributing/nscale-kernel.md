@@ -127,10 +127,11 @@ To chat with the owners/contributors visit the [nscale gitter][gitter] page.
 
 If you make any improvements please check out our general guidelines for submitting a [pull request.][pull-requests]
 
-[Back To - Home][]
+[Back To - Home][] | [Next: Wiring up containers/dependencies to the kernel][containers]
 
 [gitter]: https://gitter.im/nearform/nscale
 [pull-requests]: ./pull-requests.md
+[containers]: ./containers.md
 [nscale-kernel]: https://github.com/nearform/nscale-kernel
 [nscale-client]: https://github.com/nearform/nscale-client
 [client-setup]: ./nscale-client.md
