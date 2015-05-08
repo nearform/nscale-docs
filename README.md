@@ -31,16 +31,22 @@ This repository contains documentation and guides relating to the setup and usag
 
 ## System
 
-> Browse more detailed information on nscale and the concepts behind it.
+> _Browse more detailed information on nscale and the concepts behind it._
 
 - [Glossary](./system/glossary.md)
 - [CLI Commands](./system/cli-commands.md)
 
 ## General
 
-> General information about the nscale project.
+> _General information about the nscale project._
 
 - [Release Policy](./general/release-policy.md)
+
+## Contributing
+
+> _Step by step guides for setting up a development version of nscale._
+
+- [Contributing](./contributing/README.md)
 
 ## License
 
