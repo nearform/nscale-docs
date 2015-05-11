@@ -98,7 +98,7 @@ __IMPORTANT!!! If the above checks do not run cleanly, please go back and check 
 Now that everything is configured you are good to start nscale:
 
 ```sh
-nscale server start
+nscale start
 ```
 
 If you are running on Linux, you need to add yourself to the `docker`

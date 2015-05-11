@@ -20,7 +20,7 @@ The kernel section defines the following:
 
 ```js
 "kernel": {
-"port": "8010",
+"port": "3223",
 "root": "/home/me/.nscale"
 }
 ```
@@ -74,9 +74,7 @@ The `nscale` root folder looks as follows:
 ##Viewing the logs
 We can view the nscale logs at any time by running
 ```bash
-nscale server logs
-nscale server logs api.log
-nscale server logs web.log
+nscale log
 ```
 
 If you experience any problems with nscale, the server logs will likely provide more useful information.

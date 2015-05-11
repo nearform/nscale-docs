@@ -8,11 +8,11 @@ Can we use nScale during the development workflow? Yes, with
 process-containers!
 
 A process container is a 'fake' container, a standard unix process on
-nScale host, managed by nScale. All the repositories defined in your
+the nScale host, managed by nScale. All the repositories defined in your
 topology will be checked out from GIT for you in workspace/\<SERVICE\>,
 and you can make your edit there.
 
-The most important feature for the development work it is the onboarding
+The most important feature for the development work is the onboarding
 of new developers into the project and manage any changes in the
 dependencies easily.
 
