@@ -1,7 +1,7 @@
 <a href='http://nscale.nearform.com'>![logo][]</a>
 
 #Deploying on AWS
-[Previous](./7-using-docker-images.md) | [Home](./)
+[Previous](./7-using-docker-images.md) | [Next](./9-aws-autoscaling.md) | [Home](./)
 
 This tutorial covers:
 
@@ -117,19 +117,21 @@ module.exports = {
   defaultVpcId: 'vpc-xxxxxxxx',
   defaultImageId: 'ami-xxxxxxxx',
   defaultInstanceType: 't2.medium'
+  defaultKeyName: "YOUR_AWS_KEY_ID_HERE"
 };
 ```
 
 You need to fill in your information here:
-* region - the region your nscale management server is located
-* identityFile - The path to the key file you copied onto the management server
-* accessKeyId - Your AWS Access Key ID
-* secretAccessKey - Your AWS Secret Access Key
-* user - The default username on the machine instances
-* defaultSubnetId - The subnet your management server is located in
-* defaultVpcId - The virtual private cloud your subnet is located in
-* defaultImageId - The image to be used when provisioning machines. Use the custom AMI you created
+* region - the region your nscale management server is located.
+* identityFile - The path to the key file you copied onto the management server.
+* accessKeyId - Your AWS Access Key ID.
+* secretAccessKey - Your AWS Secret Access Key.
+* user - The default username on the machine instances.
+* defaultSubnetId - The subnet your management server is located in.
+* defaultVpcId - The virtual private cloud your subnet is located in.
+* defaultImageId - The image to be used when provisioning machines. Use the custom AMI you created.
 * defaultInstanceType - The type of instance to be provisioned. You can use t2.micro if you like.
+* defaultKeyName - The name of your key-pair in aws.
 
 Save the file as `config.js`
 
@@ -211,6 +213,6 @@ nscale system check sudc aws
 ```
 Congratulations - you are now an nscale AWS ninja!
 
-[Previous](./7-using-docker-images.md) | [Home](./)
+[Previous](./7-using-docker-images.md) | [Next](./9-aws-autoscaling.md) | [Home](./)
 
 [logo]:../_imgs/logo.png
