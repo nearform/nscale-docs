@@ -16,6 +16,7 @@ nscale Tutorials
 6. [Automatic system fix](./6-system-fix.md)
 7. [Using an image from Docker Hub](./7-using-docker-images.md)
 8. [Deploying to AWS](./8-deploy-to-aws.md)
+9. [AWS Autoscaling](./9-aws-autoscaling.md)
 
 ##Extras
 - [Deploy directly via SSH to DigitalOcean](./direct-digitalocean.md)
