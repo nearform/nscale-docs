@@ -10,7 +10,7 @@ This tutorial covers:
 
 ## What is Auto Scaling?
 
-Auto Scaling is a powerful feature which allows AWS to provision and deprovision additional instances based off user defined triggers (e.g. increased network load). This feature allows an system's architecture to scale and shrink as required. 
+Auto Scaling is a powerful feature which allows AWS to provision and deprovision additional instances based off user defined triggers (e.g. increased network load). This feature allows a system's architecture to scale and shrink as required. 
 
 The difficulty lies in configuring the newly provisioned instances. Once a new instance goes online, how do we deploy our service(s) to it? Ideally, we want this to happen automatically. With clever usage of the [AWS SDK for Node.js][aws-sdk], nscale makes this easy to configure.
 
@@ -92,7 +92,7 @@ autoscaling: {
 ```
 Here the topology is defined in a similar mannner to the previous aws topology.
 - Instead of specifiying awsMachine containers inside the awsWebSg container, we specify the awsAutoScaling container.
-- Inside this we specify the 'blank' awsMachine container which is where the services will be deployed.
+- Inside this we specify the 'blank' awsAMachine container which is where the services will be deployed.
 
 ### config.js
 Open `config.js` (`config.example.js` if you haven't done the [previous][] exercise) it should look similar to this:
@@ -184,8 +184,6 @@ Go to the auto scaling group and click on the scaling history tab. You will see 
 Hit the refresh button every 30 seconds or so and eventually you will see some activity.
 
 You will be able to see the instances spinning up and being torn down.
-
-during this time
 
 After all events have completed the full history should look like similar to the following:
 
