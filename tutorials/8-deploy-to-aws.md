@@ -142,7 +142,7 @@ nscale system compile sudc aws
 ```
 Now let's take a look at the system definition:
 ```bash
-nscale container list sudc
+nscale container list latest
 ```
 You should see the following containers:
 ```bash
