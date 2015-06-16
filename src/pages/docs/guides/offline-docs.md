@@ -3,22 +3,23 @@ layout: docs.html
 ---
 
 # Running our site locally
-This site can be ran offline very easily. This is great if you need access to our documentation
-while on a plane or outside an area of connectivity. Assuming you have node and git installed, lets
-walk through the steps to run offline.
+Our site can be ran offline very easily which is great if you need access to our documentation
+while on a plane or outside an area of connectivity. Assuming you have node and git installed,
+follow the steps below to enable offline access.
 
-## Clone Repo
-First, we need to clone this repository locally. We suggest you first fork, in case you find anything
-you want to change. Assuming you have first forked, run the following in the console:
+## Clone
+First, we need to clone this repository locally. We suggest you use a fork, in case you find
+anything you want to change and send back to us. Assuming you have first forked, run the following
+in a new terminal window:
 
 ```
 git clone https://github.com/<Your Username>/nscale-docs.git
 ```
 
 
-## Install Dependencies
-Navigate into the the repository using your terminal, run the following command to install all
-dependencies. This command assumes you have both node.js and npm installed:
+## Install
+Navigate into the repositories' directory using your terminal, run the following command to
+install all dependencies:
 
 ```
 npm install
@@ -33,6 +34,6 @@ npm run serve
 
 ## Contributing
 Got something to add? Like nscale, our docs and site are also open source. We have a great contribution
-guide specifically taliored to contributing to our site:
+guide specifically tailored to contributing to our site:
 
 - [Contributing to nscale's docs](/docs/contributing/doc-contrib.html)
