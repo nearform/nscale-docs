@@ -16,8 +16,9 @@ prerequisites. It finishes up demonstrating general usage and local deployments.
 We have a number of guides that walk you through configuring your platform with nscale and its
 prerequisites.
 
-- ##### [Installing Node](./setup-guides/installing-node.html)
-- ##### [AWS Setup Guide](./setup-guides/aws-setup-guide.html)
+- ##### [Installing node.js](./guides/installing-node.html)
+- ##### [AWS setup guide](./guides/aws-setup-guide.html)
+- ##### [Running our site locally](./guides/offline-docs.html)
 
 ## Workshop
 We've put together a much fuller and complete set of linear exercises for those who wish get a
