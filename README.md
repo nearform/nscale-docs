@@ -14,8 +14,7 @@ Copyright (c) 2014-2015 [nearForm][] and other contributors
 
 Licensed under the [Artistic License 2.0][]
 
-
-[logo]: /src/images/logo-top.png
+[logo]: src/images/site/logo-banner.png
 [nearForm]: http://nearform.com
 [site]: http://nscale.nearform.com
 [Artistic License 2.0]:./LICENSE
