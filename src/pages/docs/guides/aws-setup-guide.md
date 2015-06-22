@@ -2,13 +2,13 @@
 layout: docs.html
 ---
 
-# Setup Guides - AWS
+# AWS Setup Guide
 
 This setup guide will walk you through installing nscale and its prerequisites on an AWS AMI.
 
 ## Requirements
 
-* An [Amazon AWS account][AWS-signup]
+- An [Amazon AWS account][1]
 
 ##nscale on AWS
 to use nscale in AWS we need two things:
@@ -74,8 +74,7 @@ scp my-key.pem my-key.pem ubuntu@56.49.82.188:~/
 
 -This should have you set up and ready to use nscale in AWS. To see an example of deploying to AWS, see the [AWS tutorial](../tutorials/8-deploy-to-aws.md)
 
-[logo]: ../_imgs/logo.png
-[AWS-signup]: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=h_ct
+[1]: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc1=h_ct
 [generate-ssh-key]: https://help.github.com/articles/generating-ssh-keys/
 [aws-cli-reference]: http://docs.aws.amazon.com/AWSEC2/latest/CommandLineReference/ApiReference-cmd-CreateImage.html
 [docker-ubuntu]: http://docs.docker.com/installation/ubuntulinux/

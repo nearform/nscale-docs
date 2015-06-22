@@ -5,7 +5,7 @@ layout: docs.html
 
 Update & Rollback
 ========
-[Previous](./4-config-&-logs.md) | [Next](./6-system-fix.md) | [Home](./)
+[Home](./) | [Previous](./4-config-&-logs.html) | [Next](./6-system-fix.html)
 
 This tutorial covers:
 
@@ -56,7 +56,7 @@ open http://$(boot2docker ip):8000
 Linux:
 open [localhost:8000](http://localhost:8000)
 
-![image](./img/bugalert.png)
+![image](/images/bugalert.png)
 
 It is this workflow which allows us to makes changes and deploy them using nscale:
 
@@ -146,6 +146,4 @@ open http://$(boot2docker ip):8000
 Linux:
 open [localhost:8000](http://localhost:8000)
 
-[Previous](./4-config-&-logs.md) | [Next](./6-system-fix.md) | [Home](./)
-
-[logo]: ../_imgs/logo.png
+[Home](./) | [Previous](./4-config-&-logs.html) | [Next](./6-system-fix.html)

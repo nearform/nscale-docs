@@ -34,6 +34,11 @@ p {
   text-decoration: underline;
 }
 
+.container img {
+    max-width:100%;
+    max-height:100%;
+}
+
 pre {
   margin-bottom: 30px;
   line-height: 1.8;
@@ -77,7 +82,7 @@ code {
 .navbar-brand {
   text-indent: -9999px;
   float: left;
-  background-image: url('../images/logo.png');
+  background-image: url('../images/site/logo-nav.png');
   width: 130px;
   height: 30px;
   background-size: 130px 30px;
@@ -169,8 +174,6 @@ a:hover {
   color: #333;
 }
 
-
-
 /* ~~~~~~~~~ Layout ~~~~~~~~~ */
 
 
@@ -181,7 +184,7 @@ a:hover {
   -webkit-box-shadow: 0 1px 5px -1px #333;
   -moz-box-shadow: 0 1px 5px -1px #333;
   box-shadow: 0 1px 5px -1px #333;
-  background: url('../images/hp-bg.png') no-repeat bottom;
+  background: url('../images/site/splash-rule.png') no-repeat bottom;
   background-size: 100% 140px;
 }
 
@@ -206,11 +209,6 @@ a:hover {
   color: #333;
   text-align: center;
 }
-
-
-
-
-
 
 /* ~~~~~~~~~ splash-box ~~~~~~~~~ */
 

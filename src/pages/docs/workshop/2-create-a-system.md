@@ -3,7 +3,7 @@ layout: docs.html
 ---
 
 # Create a System With NScale
-[Previous](./1-nscale-intro.md) | [Next](./3-deploy-larger-application.md) | [Home](./)
+[Home](./) | [Previous](./1-nscale-intro.html) | [Next](./3-deploy-larger-application.html)
 
 This tutorial covers:
 
@@ -302,6 +302,4 @@ prepare the build.
 
 Thanks to this file, we can build multiple containers from the same git repository.
 
-[Previous](./1-nscale-intro.md) | [Next](./3-deploy-larger-application.md) | [Home](./)
-
-[logo]: ../_imgs/logo.png
+[Home](./) | [Previous](./1-nscale-intro.html) | [Next](./3-deploy-larger-application.html)

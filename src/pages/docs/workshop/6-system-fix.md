@@ -5,7 +5,7 @@ layout: docs.html
 
 Check and fix
 =============
-[Previous](./5-update-&-rollback.md) | [Next](./7-using-docker-images.md) | [Home](./)
+[Home](./) | [Previous](./5-update-&-rollback.html) | [Next](./7-using-docker-images.html)
 
 This tutorial covers:
 
@@ -97,6 +97,4 @@ open http://$(boot2docker ip):8000
 Linux:
 open [localhost:8000](http://localhost:8000)
 
-[Previous](./5-update-&-rollback.md) | [Next](./7-using-docker-images.md) | [Home](./)
-
-[logo]: ../_imgs/logo.png
+[Home](./) | [Previous](./5-update-&-rollback.html) | [Next](./7-using-docker-images.html)

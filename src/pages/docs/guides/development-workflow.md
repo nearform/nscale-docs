@@ -3,9 +3,7 @@ layout: docs.html
 ---
 
 
-Development Workflow
-====================
-[Tutorials Home](./)
+# Development Workflow
 
 Can we use nScale during the development workflow? Yes, with
 process-containers!
@@ -26,8 +24,7 @@ This guide is composed of two sections:
 
 
 <a name="existing"></a>
-Editing an existing system
---------------------------
+## Editing an existing system
 It is this workflow which allows us to makes changes and deploy them using nscale:
 
   - Make changes in code
@@ -72,7 +69,7 @@ nscale rev dep head process
 
 Open up `workspace/sudc-web/web/public/js/app.js` and add an alert after the 'Your code here' comment:
 
-```js
+```
 initialize: function () {
     // Your code here
     alert('Hello World!');
@@ -91,12 +88,14 @@ nscale sys compile
 ```
 
 build the Web container:
-```bash
+
+```
 nscale cont build web latest process
 ```
 
 redeploy:
-```bash
+
+```
 nscale rev deploy sudc latest process
 ```
 

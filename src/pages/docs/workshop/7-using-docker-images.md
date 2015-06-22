@@ -5,7 +5,7 @@ layout: docs.html
 
 Use an image from Docker Hub
 ==================================
-[Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md) | [Home](./)
+[Home](./) | [Previous](./6-system-fix.html) | [Next](./8-deploy-to-aws.html)
 
 This tutorial covers:
 
@@ -159,6 +159,4 @@ you may need to install redis-tools
 sudo apt-get install redis-tools
 ```
 
-[Previous](./6-system-fix.md) | [Next](./8-deploy-to-aws.md) | [Home](./)
-
-[logo]: ../_imgs/logo.png
+[Home](./) | [Previous](./6-system-fix.html) | [Next](./8-deploy-to-aws.html)

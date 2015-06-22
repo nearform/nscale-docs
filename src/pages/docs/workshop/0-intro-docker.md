@@ -2,10 +2,8 @@
 layout: docs.html
 ---
 
-
-Docker Introduction
-===================
-[Next up: nscale intro](./1-nscale-intro.md) | [Home](./)
+# Docker Introduction
+[Home](./) | [Next](./1-nscale-intro.html)
 
 This exercise walks through:
 
@@ -21,11 +19,10 @@ fresh Linux environment that bootstraps from a host systems Linux kernel - this 
 of the benefits of the VM but without the slow execution and bulk often associated with
 VMs.
 
-### Installation
+## Installation
 
-If you are Linux (Ubuntu), follow https://docs.docker.com/installation/ubuntulinux/
-
-If you are on Mac OS X, follow https://docs.docker.com/installation/mac/
+- If you are Linux (Ubuntu), follow https://docs.docker.com/installation/ubuntulinux/
+- If you are on Mac OS X, follow https://docs.docker.com/installation/mac/
 
 Alternatively, see Docker's list of installation guides [here](https://docs.docker.com/installation/).
 
@@ -33,28 +30,26 @@ If any software listed in the guides is already installed on your system, you ca
 of course skip those steps.
 
 ___Note:___ Once you have docker installed, add yourself to the docker group using:
-```bash
+```
 sudo usermod -G docker -a `whoami`
 ```
  ___nscale requires this to work correctly.___
 
-### Basic knowledge of Docker
-
 Let's do a quick sanity check:
 
-```bash
+```
 $ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-`````
+```
 
 Docker hasn't complained so we're good to go, the output shows
 that we have no containers running. Don't worry, we'll build one shortly.
 
-### Run Node.js in a Docker container
+## Run Node.js in a Docker container
 
 The following command will start a Node REPL inside a Docker container
 
-```bash
+```
 $ docker run -it --rm node node
 ```
 
@@ -64,15 +59,12 @@ container and runs the `node` executable, thus giving us the
 Node REPL.
 
 
-Our static website on Docker
------------------------------
-
-### Project Setup
+## A static website on Docker
 
 First let's create a new directory and initialize a new git repo
 inside it:
 
-```bash
+```
 $ mkdir mystatic
 $ cd mystatic
 $ git init
@@ -95,12 +87,12 @@ console.log('Server running on port', port);
 We'll save that in a file named `app.js`.
 
 We can test it in the usual way:
-```bash
+```
 $ node app.js
 ```
 
 Then in another shell:
-```bash
+```
 $ curl http://localhost:1337
 ```
 
@@ -126,20 +118,23 @@ ENTRYPOINT ["node", "/src/app.js"]
 ```
 
 We can build it by typing:
-```bash
+
+```
 $ docker build .
 ```
 
 Which will eventually output:
-```bash
+
+```
 Successfully built <containerid>
 ```
 
 Next we run our container with:
 
-```bash
+```
 docker run -p 80:1337 <containerid>
 ```
+
 (copy paste the container id from the previous command)
 
 
@@ -150,12 +145,12 @@ If we're using OS X we're using boot2docker which is actually a Linux VM,
 we need to use the $DOCKER_HOST environment variable to access the VM's
 localhost.
 
-```bash
+```
 $ curl http://$(boot2docker ip):80
 ```
 Otherwise, if we're using Linux we simply request localhost:
 
-```bash
+```
 $ curl http://localhost:80
 ```
 
@@ -163,6 +158,4 @@ $ curl http://localhost:80
 Here's one we made earlier:
 <https://github.com/nearform/nscale-workshop-intro-docker-sample>
 
-[Next up: nscale intro](./1-nscale-intro.md) | [Home](./)
-
-[logo]:../_imgs/logo.png
+[Home](./) | [Next](./1-nscale-intro.html)

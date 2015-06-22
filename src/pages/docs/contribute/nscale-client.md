@@ -88,5 +88,3 @@ If you make any improvements please check out our general guidelines for submitt
 [pull-requests]: ./pull-requests.md
 [nscale-client]: https://github.com/nearform/nscale-client
 [dev-kernel]: ./nscale-kernel.md
-[Back To - Home]: ./README.md
-[logo]: ../_imgs/logo.png

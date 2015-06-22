@@ -72,12 +72,8 @@ To chat with the owners/contributors visit the [nscale gitter][gitter] page.
 
 If you make any improvements please check out our general guidelines for submitting a [pull request.][pull-requests]
 
-[Back To - Home][] | [Set up a development version of the nscale client][nscale-client]
-
 [gitter]: https://gitter.im/nearform/nscale
 [pull-requests]: ./pull-requests.md
 [nscale-client]: ./nscale-client.md
 [process]: http://github.com/nearform/process-container
 [dev-kernel]: ./nscale-kernel.md
-[Back To - Home]: ./README.md
-[logo]: ../_imgs/logo.png

@@ -2,9 +2,7 @@
 layout: docs.html
 ---
 
-
-#Direct deployment on Digital Ocean
-[Tutorials Home](./)
+#Digital Ocean Setup Guide
 
 Since version 0.9 nscale supports _any cloud provider that gives SSH
 access_, plus bare-metal deployments.
@@ -20,7 +18,7 @@ application to a single machine.
 Create a new Droplet in DigitalOcean, and select the Docker application,
 like in the following screenshot:
 
-![image](./img/droplet-creation-screenshot.png)
+![image](/images/droplet-creation-screenshot.png)
 
 And SSH into that machine.
 
@@ -34,13 +32,13 @@ deployments you might need larger disks.
 
 We suggest to install node via [nvm](nvm), using:
 
-```bash
+```
 curl https://raw.githubusercontent.com/creationix/nvm/v0.18.0/install.sh | bash
 ```
 
 Then, logoff, login and run:
 
-```bash
+```
 apt-get update
 apt-get install build-essential
 nvm install v0.10.35
@@ -55,14 +53,14 @@ node.js and nscale are now installed, launch it via `nscale ser start`.
 
 You need to configure GIT to use nscale:
 
-```bash
+```
 git config --global user.name "your name"
 git config --global user.email "you@somewhere.com"
 ```
 
 ##System set up
 
-```bash
+```
 nscale login
 git clone https://github.com/nearform/sudc-system.git
 cd sudc-system
@@ -73,7 +71,7 @@ nscale sys list
 
 We need to generate an ssh key with no passphrase for this project:
 
-```bash
+```
 ssh-keygen -t rsa
 ```
 
@@ -86,13 +84,13 @@ Open your Digital Ocean admin panel.
 Create a new machine like [the previous one](#nscale-machine), but
 configure it with the newly created ssh key:
 
-![image](./img/digital-ocean-add-key.png)
+![image](/images/digital-ocean-add-key.png)
 
 Note the IP address of the machine, for this tutorial it's: 178.62.92.122. Replace this with your own.
 
 Test that you can access the machine from the nscale machine with:
 
-```bash
+```
 ssh -i ~/.ssh/direct 178.62.92.122
 ```
 
@@ -143,7 +141,7 @@ Put in the ip address of the newly created machine
 
 Compile your topology with:
 
-```bash
+```
 nscale sys comp direct
 ```
 
@@ -151,7 +149,7 @@ nscale sys comp direct
 
 You can build all your containers with:
 
-```bash
+```
 nscale cont buildall sudc-system latest direct
 ```
 
@@ -159,7 +157,7 @@ Go grab a cup of coffee, while nscale builds everything for you.
 
 Then, launch:
 
-```bash
+```
 nscale rev dep sudc-system latest direct
 ```
 
@@ -173,10 +171,6 @@ https://github.com/nearform/sudc-system/tree/direct
 [sudc]: http://github.com/nearform/sudc-system
 [doreferral]: https://www.digitalocean.com/?refcode=c85081546a8e
 
-[Tutorials Home](./)
-
-[logo]:../_imgs/logo.png
-<a href='http://nscale.nearform.com'>![logo][]</a>
 
 #Direct deployment on Digital Ocean
 [Tutorials Home](./)
@@ -195,7 +189,7 @@ application to a single machine.
 Create a new Droplet in DigitalOcean, and select the Docker application,
 like in the following screenshot:
 
-![image](./img/droplet-creation-screenshot.png)
+![image](/images/droplet-creation-screenshot.png)
 
 And SSH into that machine.
 
@@ -209,13 +203,13 @@ deployments you might need larger disks.
 
 We suggest to install node via [nvm](nvm), using:
 
-```bash
+```
 curl https://raw.githubusercontent.com/creationix/nvm/v0.18.0/install.sh | bash
 ```
 
 Then, logoff, login and run:
 
-```bash
+```
 apt-get update
 apt-get install build-essential
 nvm install v0.10.35
@@ -230,14 +224,14 @@ node.js and nscale are now installed, launch it via `nscale ser start`.
 
 You need to configure GIT to use nscale:
 
-```bash
+```
 git config --global user.name "your name"
 git config --global user.email "you@somewhere.com"
 ```
 
 ##System set up
 
-```bash
+```
 nscale login
 git clone https://github.com/nearform/sudc-system.git
 cd sudc-system
@@ -248,7 +242,7 @@ nscale sys list
 
 We need to generate an ssh key with no passphrase for this project:
 
-```bash
+```
 ssh-keygen -t rsa
 ```
 
@@ -267,7 +261,7 @@ Note the IP address of the machine, for this tutorial it's: 178.62.92.122. Repla
 
 Test that you can access the machine from the nscale machine with:
 
-```bash
+```
 ssh -i ~/.ssh/direct 178.62.92.122
 ```
 
@@ -318,7 +312,7 @@ Put in the ip address of the newly created machine
 
 Compile your topology with:
 
-```bash
+```
 nscale sys comp direct
 ```
 
@@ -326,7 +320,7 @@ nscale sys comp direct
 
 You can build all your containers with:
 
-```bash
+```
 nscale cont buildall sudc-system latest direct
 ```
 
@@ -334,7 +328,7 @@ Go grab a cup of coffee, while nscale builds everything for you.
 
 Then, launch:
 
-```bash
+```
 nscale rev dep sudc-system latest direct
 ```
 
@@ -347,7 +341,3 @@ https://github.com/nearform/sudc-system/tree/direct
 
 [sudc]: http://github.com/nearform/sudc-system
 [doreferral]: https://www.digitalocean.com/?refcode=c85081546a8e
-
-[Tutorials Home](./)
-
-[logo]:../_imgs/logo.png

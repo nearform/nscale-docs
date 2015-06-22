@@ -5,7 +5,7 @@ layout: docs.html
 
 Configuration & Logs
 ============
-[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./)
+[Home](./) | [Previous](./3-deploy-larger-application.html) | [Next](./5-update-&-rollback.html)
 
 This tutorial covers:
 
@@ -21,7 +21,7 @@ The kernel section defines the following:
   port - the port the nscale kernel should run on
   root - the full path where all nscale data resides - system data, build data and target data
 
-```js
+```
 "kernel": {
 "port": "3223",
 "root": "/home/me/.nscale"
@@ -30,7 +30,7 @@ The kernel section defines the following:
 
 The modules section defines the following:
 
-```js
+```
 "modules": {
     "protocol": {
       "require": "nscale-protocol",
@@ -54,7 +54,7 @@ Right now the authorization module just picks up your git credentials, however t
 ##System Specific Configurations
 Since v0.15 configurations local to one system can be defined in the root folder of that system. If we turn our attention back to the sudc-system example and open `config.example.js`:
 
-```js
+```
 module.exports = {
   region: 'us-west-2',
   identityFile: "key.pem",
@@ -72,7 +72,7 @@ This example configuration file shows the parameters which should be included fo
 
 The `nscale` root folder looks as follows:
 
-![image](./img/configdir.png)
+![image](/images/configdir.png)
 
 ##Viewing the logs
 We can view the nscale logs at any time by running
@@ -89,7 +89,4 @@ If you find issues while using nscale, please post an issue on the [nscale][nsca
 5. The relevant ouput of the terminal you were using nscale in.
 6. The output of `nscale server logs`
 
-[Previous](./3-deploy-larger-application.md) | [Next](./5-update-&-rollback.md) | [Home](./)
-
-[logo]: ../_imgs/logo.png
-[nscale-repo]: https://github.com/nearform/nscale
+[Home](./) | [Previous](./3-deploy-larger-application.html) | [Next](./5-update-&-rollback.html)

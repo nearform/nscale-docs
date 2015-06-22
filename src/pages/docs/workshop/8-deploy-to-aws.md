@@ -4,7 +4,7 @@ layout: docs.html
 
 
 #Deploying on AWS
-[Previous](./7-using-docker-images.md) | [Home](./)
+[Home](./) | [Previous](./7-using-docker-images.html)
 
 This tutorial covers:
 
@@ -214,6 +214,4 @@ nscale system check sudc aws
 ```
 Congratulations - you are now an nscale AWS ninja!
 
-[Previous](./7-using-docker-images.md) | [Home](./)
-
-[logo]:../_imgs/logo.png
+[Home](./) | [Previous](./7-using-docker-images.html)

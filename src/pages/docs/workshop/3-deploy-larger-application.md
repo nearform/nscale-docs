@@ -2,9 +2,8 @@
 layout: docs.html
 ---
 
-A Larger Application
-=======================
-[Previous](./2-create-a-system.md) | [Next](./4-config-&-logs.md) | [Home](./)
+# A Larger Application
+[Home](./) | [Previous](./2-create-a-system.html) | [Next](./4-config-&-logs.html)
 
 This tutorial covers:
 
@@ -172,6 +171,4 @@ Linux:
 open [localhost:8000](http://localhost:8000)
 
 
-[Previous](./2-create-a-system.md) | [Next](./4-config-&-logs.md) | [Home](./)
-
-[logo]: ../_imgs/logo.png
+[Home](./) | [Previous](./2-create-a-system.html) | [Next](./4-config-&-logs.html)
